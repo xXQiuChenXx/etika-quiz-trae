@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghayatan Etika dan Peradaban Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Penghayatan Etika dan Peradaban</h1>
+            <div class="quiz-modes">
+                <button id="sequential-mode" class="mode-btn active">Urutan</button>
+                <button id="random-mode" class="mode-btn">Rawak</button>
+                <button id="wrong-mode" class="mode-btn">Soalan Salah</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="quiz-container">
+                <div id="progress-container">
+                    <div id="progress-bar">
+                        <div id="progress-fill"></div>
+                    </div>
+                    <div id="progress-text">Soalan 0/0</div>
+                </div>
+
+                <div id="question-container">
+                    <h2 id="question-text">Soalan akan dipaparkan di sini</h2>
+                    <div id="options-container">
+                        <!-- Options will be generated dynamically -->
+                    </div>
+                </div>
+
+                <div id="controls">
+                    <button id="submit-btn" disabled>Semak Jawapan</button>
+                    <button id="next-btn" disabled>Soalan Seterusnya</button>
+                </div>
+
+                <div id="result-container" class="hidden">
+                    <div id="result-header"></div>
+                    <div id="correct-answer"></div>
+                    <div id="explanation"></div>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <h3>Statistik</h3>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Betul:</span>
+                        <span id="correct-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Salah:</span>
+                        <span id="wrong-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Jumlah:</span>
+                        <span id="total-count">0</span>
+                    </div>
+                </div>
+                <button id="reset-btn">Mula Semula</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Penghayatan Etika dan Peradaban Quiz</p>
+        </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

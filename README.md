@@ -36,7 +36,7 @@ A responsive web application for practicing and testing knowledge on Penghayatan
 No installation required. Simply open the `index.html` file in any modern web browser.
 
 ```
-git clone https://github.com/yourusername/etika-quiz-trae.git
+git clone https://github.com/xXQiuChenXx/etika-quiz-trae.git
 cd etika-quiz-trae
 # Open index.html in your browser
 ```
@@ -48,12 +48,13 @@ cd etika-quiz-trae
 ├── styles.css          # CSS styles
 ├── questions.js        # Quiz questions data
 ├── app.js              # Application logic
+├── LICENSE             # MIT License
 └── README.md           # Project documentation
 ```
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 

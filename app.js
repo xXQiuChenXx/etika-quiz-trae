@@ -4,6 +4,7 @@ const optionsContainer = document.getElementById('options-container');
 const submitBtn = document.getElementById('submit-btn');
 const nextBtn = document.getElementById('next-btn');
 const resetBtn = document.getElementById('reset-btn');
+const clearCacheBtn = document.getElementById('clear-cache-btn');
 const resultContainer = document.getElementById('result-container');
 const resultHeader = document.getElementById('result-header');
 const correctAnswerText = document.getElementById('correct-answer');
@@ -57,6 +58,11 @@ function setQuizMode(mode) {
         if (wrongQuestions.length > 0) {
             shuffledQuestions = wrongQuestions.map(id => quizQuestions.find(q => q.id === id));
             currentQuestionIndex = 0;
+            
+            // For wrong questions mode, clear previous answers to allow retrying
+            shuffledQuestions.forEach(question => {
+                delete userAnswers[question.id];
+            });
         } else {
             // If no wrong questions, show a message and default to sequential
             alert('Tiada soalan yang dijawab salah. Sila jawab beberapa soalan terlebih dahulu.');
@@ -120,9 +126,9 @@ function renderQuestion() {
     // Update progress
     updateProgress();
     
-    // If this question was already answered, show the previous answer
+    // If this question was already answered and we're not in wrong questions mode, show the previous answer
     const questionId = currentQuestion.id;
-    if (userAnswers[questionId]) {
+    if (userAnswers[questionId] && quizMode !== 'wrong') {
         const previousAnswer = userAnswers[questionId];
         selectOption(previousAnswer);
         checkAnswer();
@@ -271,6 +277,15 @@ function resetQuiz() {
     }
 }
 
+// Clear cache
+function clearCache() {
+    if (confirm('Adakah anda pasti mahu memadamkan semua cache dan statistik? Tindakan ini tidak boleh dibatalkan.')) {
+        localStorage.clear();
+        alert('Cache telah dipadamkan. Halaman akan dimuat semula.');
+        window.location.reload();
+    }
+}
+
 // Save user progress to localStorage
 function saveUserProgress() {
     const progress = {
@@ -301,6 +316,7 @@ function loadUserProgress() {
 submitBtn.addEventListener('click', checkAnswer);
 nextBtn.addEventListener('click', nextQuestion);
 resetBtn.addEventListener('click', resetQuiz);
+clearCacheBtn.addEventListener('click', clearCache);
 
 sequentialModeBtn.addEventListener('click', () => setQuizMode('sequential'));
 randomModeBtn.addEventListener('click', () => setQuizMode('random'));

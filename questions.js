@@ -1,952 +1,960 @@
-// Quiz questions data
+// Data Soalan Kuiz
+// Data ini mengandungi 50 soalan aneka pilihan berdasarkan Topik 1 hingga 4.
+// Setiap objek soalan merangkumi:
+// - id: Pengenal pasti unik untuk soalan.
+// - question: Teks soalan dengan awalan topik.
+// - options: Satu tatasusunan (array) objek pilihan jawapan (A, B, C, D).
+// - correctAnswer: ID pilihan jawapan yang betul.
+// - explanation: Objek yang mengandungi penjelasan untuk jawapan yang betul dan salah.
+
 const quizQuestions = [
     {
         id: 1,
-        question: "Berdasarkan susur masa evolusi sejarah Malaysia, gabungan etika tradisional dan moden tergarap pada era mana?",
+        question: "[Topik 1] Apakah yang dimaksudkan dengan 'adab' dalam konteks etika tradisional masyarakat Melayu?",
         options: [
-            { id: "A", text: "Prakolonial" },
-            { id: "B", text: "Kolonial" },
-            { id: "C", text: "Pascakolonial" },
-            { id: "D", text: "Globalisasi" }
+            { id: "A", text: "Peraturan rasmi dalam upacara pertabalan diraja." },
+            { id: "B", text: "Tingkah laku dan budi pekerti yang halus serta sopan." },
+            { id: "C", text: "Undang-undang bertulis yang dikuatkuasakan oleh pemerintah." },
+            { id: "D", text: "Kebiasaan yang diamalkan oleh sesuatu kaum berkaitan perkahwinan." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 8 menyatakan dengan jelas: \"Gabungan kedua-dua bentuk etika, tradisional dan moden tersebut, telah tergarap pada era pascakolonial\".",
+            correct: "Jawapan B adalah betul. 'Adab' secara spesifiknya merujuk kepada kelakuan, budi bahasa, dan kesopanan individu dalam interaksi sosial.",
             incorrect: {
-                "A": "A salah kerana era prakolonial hanya mempunyai etika tradisional seperti 'adab' dan 'adat'.",
-                "B": "B salah kerana era kolonial adalah masa etika moden diperkenalkan oleh Eropah, bukan gabungannya dengan etika tradisional.",
-                "D": "D salah kerana walaupun globalisasi berlaku dalam era pascakolonial, istilah yang spesifik digunakan dalam nota untuk fasa gabungan ini ialah 'pascakolonial'."
+                "A": "Pilihan A salah kerana ia merujuk kepada 'adat istiadat'.",
+                "C": "Pilihan C salah kerana ia merujuk kepada sistem perundangan formal.",
+                "D": "Pilihan D salah kerana ia adalah definisi bagi 'adat resam'."
             }
         }
     },
     {
         id: 2,
-        question: "Apakah yang dimaksudkan dengan 'Adat Resam' mengikut Kamus Pelajar Edisi Kedua?",
+        question: "[Topik 1] Manakah antara berikut paling tepat menerangkan evolusi etika dalam 'acuan Malaysia' mengikut susur masa?",
         options: [
-            { id: "A", text: "Budi pekerti yang halus dan tingkah laku yang baik." },
-            { id: "B", text: "Adat yang menjadi kebiasaan kepada sesuatu kaum." },
-            { id: "C", text: "Pelbagai adat dan kebiasaan dalam majlis rasmi." },
-            { id: "D", text: "Sifat ciri sesuatu bangsa, budaya, atau era." }
+            { id: "A", text: "Etika moden menggantikan sepenuhnya etika tradisional selepas era kolonial." },
+            { id: "B", text: "Etika tradisional dan moden wujud secara berasingan tanpa sebarang pengaruh antara satu sama lain." },
+            { id: "C", text: "Gabungan etika tradisional (adab, adat) dan etika moden (etika, etos, etiket) membentuk etika pascakolonial." },
+            { id: "D", text: "Etika di Malaysia hanya mula diperkenalkan semasa zaman kolonial oleh penjajah Eropah." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan B adalah tepat kerana ia merupakan definisi langsung dari sumber 71 yang menyatakan Adat Resam ialah \"adat yg menjadi kebiasaan kpd sesuatu kaum (daerah dll)\".",
+            correct: "Jawapan C adalah betul. 'Acuan Malaysia' merujuk kepada percampuran dan gabungan nilai-nilai etika dari zaman prakolonial dengan etika yang diperkenalkan semasa zaman kolonial, yang terus berkembang pada era pascakolonial.",
             incorrect: {
-                "A": "A adalah definisi untuk 'Adab'.",
-                "C": "C adalah definisi untuk 'Adat Istiadat'.",
-                "D": "D adalah definisi untuk 'Etos'."
+                "A": "Pilihan A salah. Etika moden tidak menggantikan sepenuhnya etika tradisional; sebaliknya, kedua-duanya saling mempengaruhi.",
+                "B": "Pilihan B salah. Terdapat proses sulaman dan percampuran antara kedua-dua bentuk etika.",
+                "D": "Pilihan D salah. Etika dalam bentuk 'adab' dan 'adat' sudah wujud lama dalam peradaban Melayu sebelum kedatangan penjajah."
             }
         }
     },
     {
         id: 3,
-        question: "Menurut nota, etika berciri moden telah diperkenalkan dan dilaksanakan di Malaysia semasa era __________.",
+        question: "[Topik 1] Apakah perbezaan utama antara 'adat resam' dan 'adat istiadat'?",
         options: [
-            { id: "A", text: "Prakolonial" },
-            { id: "B", text: "Kolonial Eropah" },
-            { id: "C", text: "Pascakolonial" },
-            { id: "D", text: "Kesultanan Melayu Melaka" }
+            { id: "A", text: "Adat resam diamalkan oleh semua kaum, manakala adat istiadat hanya untuk golongan diraja." },
+            { id: "B", text: "Adat resam merujuk kepada kebiasaan dalam kehidupan harian, manakala adat istiadat merujuk kepada upacara rasmi." },
+            { id: "C", text: "Adat resam adalah peraturan tidak bertulis, manakala adat istiadat adalah undang-undang bertulis." },
+            { id: "D", text: "Adat resam berasal dari pengaruh Barat, manakala adat istiadat berasal dari tradisi tempatan." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 6 menyatakan, \"Sifat dan kefahaman mengenai etika berciri moden diperkenal dan dilaksanakan semasa era kolonial Eropah\".",
+            correct: "Jawapan B adalah betul. 'Adat resam' adalah amalan kebiasaan dalam kitaran hidup (cth: perkahwinan), manakala 'adat istiadat' adalah tatacara dalam majlis formal (cth: pertabalan).",
             incorrect: {
-                "A": "A dan D salah kerana era ini didominasi oleh konsep 'adab' dan 'adat' tradisional.",
-                "C": "C salah kerana era pascakolonial adalah era gabungan etika moden dan tradisional.",
-                "D": "A dan D salah kerana era ini didominasi oleh konsep 'adab' dan 'adat' tradisional."
+                "A": "Pilihan A salah. Adat istiadat tidak terhad kepada golongan diraja sahaja (cth: istiadat konvokesyen).",
+                "C": "Pilihan C salah. Kedua-duanya lazimnya adalah peraturan tidak bertulis yang diwarisi.",
+                "D": "Pilihan D salah. Kedua-duanya berakar umbi daripada tradisi tempatan."
             }
         }
     },
     {
         id: 4,
-        question: "Apakah tiga faktor utama yang mempengaruhi tahap penghayatan etika dan peradaban sesebuah masyarakat mengikut acuan Malaysia?",
+        question: "[Topik 1] Istilah 'etiket' yang diperkenalkan semasa era kolonial merujuk kepada?",
         options: [
-            { id: "A", text: "Politik, Ekonomi dan Sosial" },
-            { id: "B", text: "Sejarah, Struktur Sosial dan Biografi" },
-            { id: "C", text: "Individu, Keluarga dan Negara" },
-            { id: "D", text: "Adab, Adat dan Etiket" }
+            { id: "A", text: "Prinsip moral asas yang menentukan benar atau salah." },
+            { id: "B", text: "Peraturan kesopanan dalam situasi sosial atau profesional tertentu." },
+            { id: "C", text: "Ciri-ciri utama yang menjadi pegangan sesuatu bangsa." },
+            { id: "D", text: "Budi pekerti halus yang perlu ada pada setiap individu." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 4 dan 131 secara jelas menyebut bahawa tahap penghayatan etika dan peradaban dipengaruhi oleh \"perkembangan sejarah, struktur sosial dan biografi masyarakat berkenaan\". Rajah pada sumber 29-43 juga menunjukkan tiga kerangka ini.",
+            correct: "Jawapan B adalah betul. 'Etiket' merujuk kepada peraturan spesifik tentang tingkah laku yang diterima dalam majlis sosial, seperti etiket di meja makan.",
             incorrect: {
-                "A": "Pilihan A, C, dan D menyenaraikan elemen-elemen yang relevan dengan etika, tetapi bukan tiga faktor kerangka analisis utama seperti yang dinyatakan dalam sinopsis.",
-                "C": "Pilihan A, C, dan D menyenaraikan elemen-elemen yang relevan dengan etika, tetapi bukan tiga faktor kerangka analisis utama seperti yang dinyatakan dalam sinopsis.",
-                "D": "Pilihan A, C, dan D menyenaraikan elemen-elemen yang relevan dengan etika, tetapi bukan tiga faktor kerangka analisis utama seperti yang dinyatakan dalam sinopsis."
+                "A": "Pilihan A adalah definisi 'etika'.",
+                "C": "Pilihan C adalah definisi 'etos'.",
+                "D": "Pilihan D lebih merujuk kepada 'adab'."
             }
         }
     },
     {
         id: 5,
-        question: "Istilah 'peradaban' berasal daripada Bahasa Arab. Sebelum kedatangan Islam, perkataan yang digunakan untuk membawa maksud yang hampir sama ialah __________.",
+        question: "[Topik 1] Bagaimanakah kerangka biografi boleh digunakan untuk menganalisis penghayatan etika dan peradaban?",
         options: [
-            { id: "A", text: "Kemajuan" },
-            { id: "B", text: "Budaya" },
-            { id: "C", text: "Tamadun" },
-            { id: "D", text: "Pembangunan" }
+            { id: "A", text: "Dengan mengkaji perkembangan sejarah sesebuah negara." },
+            { id: "B", text: "Dengan melihat bagaimana institusi seperti negara dan pasaran mempengaruhi tingkah laku." },
+            { id: "C", text: "Dengan meneliti bagaimana pengalaman hidup individu, keluarga, dan komuniti membentuk nilai mereka." },
+            { id: "D", text: "Dengan membandingkan struktur sosial masyarakat tradisional dan moden." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 1244 menyatakan, \"Sebelum kedatangan Islam, perkataan yang digunakan untuk membawa maksud peradaban adalah budaya yang bertunjangkan kepada keluhuran nilai dan kehalusan budi pekerti\".",
+            correct: "Jawapan C adalah betul. Kerangka biografi memberi tumpuan kepada riwayat hidup atau pengalaman peribadi seseorang dan komuniti terdekatnya dalam membentuk pemahaman dan amalan etika.",
             incorrect: {
-                "A": "A dan D adalah istilah Melayu yang digunakan untuk menjelaskan peningkatan hidup, tetapi tidak meluas seperti 'tamadun'.",
-                "C": "C salah kerana 'tamadun' adalah istilah Arab yang diterima pakai selepas kedatangan Islam dan menjadi sinonim dengan 'peradaban'.",
-                "D": "A dan D adalah istilah Melayu yang digunakan untuk menjelaskan peningkatan hidup, tetapi tidak meluas seperti 'tamadun'."
+                "A": "Pilihan A adalah analisis melalui kerangka sejarah.",
+                "B": "Pilihan B adalah analisis melalui kerangka struktur sosial.",
+                "D": "Pilihan D juga adalah analisis melalui kerangka struktur sosial."
             }
         }
     },
     {
         id: 6,
-        question: "Proses interaksi di mana setiap kumpulan etnik menyedari dan menghormati norma serta nilai etnik lain tanpa menggugat budaya masing-masing dikenali sebagai __________.",
+        question: "[Topik 2] Apakah perubahan utama dalam pemikiran etika di Eropah semasa zaman 'Enlightenment'?",
         options: [
-            { id: "A", text: "Akomodasi" },
-            { id: "B", text: "Asimilasi" },
-            { id: "C", text: "Segregasi" },
-            { id: "D", text: "Amalgamasi" }
+            { id: "A", text: "Pengukuhan kuasa gereja dalam menentukan semua prinsip moral." },
+            { id: "B", text: "Penekanan kepada wahyu sebagai satu-satunya sumber etika." },
+            { id: "C", text: "Pemisahan antara agama dan politik, dengan penekanan pada rasionaliti dan hak asasi." },
+            { id: "D", text: "Kemunculan sistem feudal yang mengikat individu kepada tradisi." }
         ],
-        correctAnswer: "A",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah A. Ini didefinisikan sebagai \"Penerimaan terhadap norma dan nilai etnik lain tanpa menggugat budaya masing-masing\" (A + B + C = A+B+C).",
+            correct: "Jawapan C adalah betul. Zaman Pencerahan (Enlightenment) membawa kepada idea pemisahan gereja daripada negara, dan mempopularkan konsep seperti hak asasi manusia dan pemerintahan berasaskan undang-undang rasional.",
             incorrect: {
-                "B": "B (Asimilasi) ialah proses di mana kumpulan minoriti menyerap budaya majoriti (A + B + C = A).",
-                "C": "C (Segregasi) ialah proses pemisahan atau pengasingan antara etnik.",
-                "D": "D (Amalgamasi) ialah percantuman biologi melalui perkahwinan campur (A + B + C = D)."
+                "A": "Pilihan A salah. Zaman Enlightenment menyaksikan pengurangan kuasa gereja.",
+                "B": "Pilihan B salah. Zaman ini menekankan akal dan penaakulan (rasionaliti).",
+                "D": "Pilihan D salah. Sistem feudal merosot selepas zaman ini."
             }
         }
     },
     {
         id: 7,
-        question: "Kewujudan masyarakat Baba dan Nyonya di Melaka adalah contoh hasil daripada proses __________.",
+        question: "[Topik 2] Apakah kesan utama kolonialisme terhadap konsep etika dan peradaban di Tanah Melayu?",
         options: [
-            { id: "A", text: "Akomodasi dan Segregasi" },
-            { id: "B", text: "Asimilasi dan Amalgamasi" },
-            { id: "C", text: "Segregasi dan Akulturasi" },
-            { id: "D", text: "Akomodasi dan Akulturasi" }
+            { id: "A", text: "Pengukuhan sistem pentadbiran berasaskan agama dan adat." },
+            { id: "B", text: "Pengenalan sistem pentadbiran yang memisahkan urusan agama daripada urusan negara." },
+            { id: "C", text: "Asimilasi sepenuhnya budaya Barat ke dalam masyarakat tempatan." },
+            { id: "D", text: "Pengekalan struktur sosial tradisional tanpa sebarang perubahan." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 1481 menyatakan: \"Proses asimilasi + amalgamasi →Baba Nyonya, Melayu keturunan Arab, Melayu keturunan India\". Ini merujuk kepada penyerapan budaya (asimilasi) dan perkahwinan campur (amalgamasi).",
+            correct: "Jawapan B adalah betul. British memperkenalkan sistem pentadbiran sekular di mana kuasa Sultan dihadkan kepada hal ehwal agama Islam dan adat, manakala pentadbiran negara diuruskan oleh mereka.",
             incorrect: {
-                "A": "Pilihan A, C, dan D mengandungi elemen yang tidak tepat. Segregasi (pemisahan) bertentangan dengan pembentukan komuniti kacukan seperti Baba dan Nyonya.",
-                "C": "Pilihan A, C, dan D mengandungi elemen yang tidak tepat. Segregasi (pemisahan) bertentangan dengan pembentukan komuniti kacukan seperti Baba dan Nyonya.",
-                "D": "Pilihan A, C, dan D mengandungi elemen yang tidak tepat. Segregasi (pemisahan) bertentangan dengan pembentukan komuniti kacukan seperti Baba dan Nyonya."
+                "A": "Pilihan A salah. Kolonialisme melemahkan sistem pentadbiran tradisional.",
+                "C": "Pilihan C salah. Asimilasi sepenuhnya tidak berlaku.",
+                "D": "Pilihan D salah. Struktur sosial mengalami perubahan besar."
             }
         }
     },
     {
         id: 8,
-        question: "Apakah matlamat utama Dasar Ekonomi Baru (DEB) yang diperkenalkan pada tahun 1970?",
+        question: "[Topik 2] Manakah antara berikut merupakan pusat peradaban Melayu-Islam yang terawal di Kepulauan Melayu?",
         options: [
-            { id: "A", text: "Memajukan sektor perindustrian dan perdagangan antarabangsa." },
-            { id: "B", text: "Menghapuskan pengaruh ekonomi British sepenuhnya." },
-            { id: "C", text: "Pembasmian kemiskinan tanpa mengira kaum dan penyusunan semula masyarakat." },
-            { id: "D", text: "Memberi tumpuan kepada pembangunan luar bandar sahaja." }
+            { id: "A", text: "Kerajaan Melaka." },
+            { id: "B", text: "Kerajaan Johor-Riau." },
+            { id: "C", text: "Kerajaan Perlak dan Samudera-Pasai." },
+            { id: "D", text: "Kerajaan Srivijaya." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1413 menyatakan objektif DEB secara jelas iaitu \"Pembasmian kemiskinan tanpa mengira kaum\" dan \"Penyusunan semula masyarakat tanpa mengikut fungsi ekonomi\".",
+            correct: "Jawapan C adalah betul. Kerajaan Islam di Perlak (abad ke-9) dan Samudera-Pasai (abad ke-11) diiktiraf sebagai antara pusat penyebaran Islam yang paling awal di rantau ini.",
             incorrect: {
-                "A": "Pilihan A, B, dan D adalah tidak tepat. Walaupun pembangunan ekonomi adalah sebahagian daripadanya, objektif serampang dua mata DEB yang utama adalah seperti yang dinyatakan dalam pilihan C.",
-                "B": "Pilihan A, B, dan D adalah tidak tepat. Walaupun pembangunan ekonomi adalah sebahagian daripadanya, objektif serampang dua mata DEB yang utama adalah seperti yang dinyatakan dalam pilihan C.",
-                "D": "Pilihan A, B, dan D adalah tidak tepat. Walaupun pembangunan ekonomi adalah sebahagian daripadanya, objektif serampang dua mata DEB yang utama adalah seperti yang dinyatakan dalam pilihan C."
+                "A": "Pilihan A salah. Melaka adalah penting tetapi bukan yang terawal.",
+                "B": "Pilihan B salah. Johor-Riau muncul selepas kejatuhan Melaka.",
+                "D": "Pilihan D salah. Srivijaya adalah empayar maritim yang dipengaruhi oleh ajaran Buddha."
             }
         }
     },
     {
         id: 9,
-        question: "Dalam konteks pemantapan kesepaduan nasional, 'Perpaduan' merujuk kepada __________.",
+        question: "[Topik 2] Apakah yang dimaksudkan dengan 'peradaban kacukan' (hybrid civilization) dalam konteks Malaysia kontemporari?",
         options: [
-            { id: "A", text: "Keadaan aman yang telah dicapai." },
-            { id: "B", text: "Proses yang sedang diusahakan secara berterusan." },
-            { id: "C", text: "Matlamat akhir yang diidamkan." },
-            { id: "D", text: "Tahap toleransi antara kaum." }
+            { id: "A", text: "Peradaban yang hanya mengamalkan nilai-nilai dari Timur." },
+            { id: "B", text: "Peradaban yang menolak sepenuhnya pengaruh globalisasi." },
+            { id: "C", text: "Peradaban yang terbentuk hasil gabungan pelbagai peradaban seperti Melayu-Islam, Cina, India, dan Barat." },
+            { id: "D", text: "Peradaban yang kembali kepada amalan zaman prakolonial." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1563 mendefinisikan 'Perpaduan' sebagai \"Matlamat Diidamkan\" atau \"matlamat akhir yang diidamkan dalam sebuah negara yang berbilang etnik\".",
+            correct: "Jawapan C adalah betul. Peradaban Malaysia hari ini adalah hasil proses sejarah di mana pelbagai unsur peradaban dunia bertemu, berinteraksi, dan tersulam membentuk satu identiti yang rencam.",
             incorrect: {
-                "A": "A adalah definisi 'Kesepaduan' (tahap dicapai).",
-                "B": "B adalah definisi 'Penyatupaduan' (proses diusaha).",
-                "D": "D adalah sebahagian daripada proses, tetapi bukan definisi 'Perpaduan' itu sendiri."
+                "A": "Pilihan A salah. Peradaban Malaysia mempunyai pengaruh Timur dan Barat.",
+                "B": "Pilihan B salah. Malaysia sangat terpengaruh dengan arus globalisasi.",
+                "D": "Pilihan D salah. Mustahil untuk kembali sepenuhnya kepada amalan prakolonial."
             }
         }
     },
     {
         id: 10,
-        question: "Tragedi 13 Mei 1969 telah menyebabkan perubahan dalam haluan negara, di mana perkataan 'Kesatuan' digantikan dengan __________.",
+        question: "[Topik 2] Bagaimanakah pengaruh peradaban China dapat dilihat dalam kebudayaan masyarakat tempatan di Malaysia?",
         options: [
-            { id: "A", text: "Keharmonian" },
-            { id: "B", text: "Kesepaduan" },
-            { id: "C", text: "Perpaduan" },
-            { id: "D", text: "Integrasi" }
+            { id: "A", text: "Melalui pengenalan sistem tulisan Rumi." },
+            { id: "B", text: "Melalui kewujudan komuniti Baba dan Nyonya serta serapan perkataan Cina ke dalam Bahasa Melayu." },
+            { id: "C", text: "Melalui pengenalan sistem perundangan sivil." },
+            { id: "D", text: "Melalui konsep hierarki dalam institusi pemerintahan beraja." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1605 menyatakan dengan jelas: \"PERPADUAN mengganti perkataan KESATUAN\". Ia mula digunakan secara rasmi dalam Rancangan Malaysia Kedua (RMK2).",
+            correct: "Jawapan B adalah betul. Komuniti Baba dan Nyonya adalah contoh jelas hasil asimilasi budaya Cina dan Melayu. Selain itu, banyak perkataan seperti 'tauke' dan 'kongsi' berasal dari bahasa Cina.",
             incorrect: {
-                "A": "Pilihan A, B, dan D adalah konsep yang berkaitan tetapi perkataan spesifik yang menggantikan 'Kesatuan' selepas 1969 ialah 'Perpaduan'.",
-                "B": "Pilihan A, B, dan D adalah konsep yang berkaitan tetapi perkataan spesifik yang menggantikan 'Kesatuan' selepas 1969 ialah 'Perpaduan'.",
-                "D": "Pilihan A, B, dan D adalah konsep yang berkaitan tetapi perkataan spesifik yang menggantikan 'Kesatuan' selepas 1969 ialah 'Perpaduan'."
+                "A": "Pilihan A salah. Tulisan Rumi diperkenalkan oleh kuasa Barat.",
+                "C": "Pilihan C salah. Sistem perundangan sivil adalah warisan kolonial British.",
+                "D": "Pilihan D salah. Konsep hierarki pemerintahan beraja lebih dipengaruhi oleh peradaban India."
             }
         }
     },
     {
         id: 11,
-        question: "Apakah yang dimaksudkan dengan etiket?",
+        question: "[Topik 3] Apakah yang dimaksudkan dengan proses 'akomodasi' dalam konteks hubungan etnik?",
         options: [
-            { id: "A", text: "Prinsip moral dan nilai-nilai akhlak." },
-            { id: "B", text: "Adat dan peraturan kesopanan dalam kehidupan sosial atau profesion." },
-            { id: "C", text: "Sistem dan tahap perkembangan sosial sesuatu bangsa." },
-            { id: "D", text: "Sifat ciri sesuatu bangsa dan budaya." }
+            { id: "A", text: "Kumpulan minoriti kehilangan identiti asal dan menerima sepenuhnya budaya majoriti." },
+            { id: "B", text: "Setiap kumpulan etnik mempertahankan budaya masing-masing tetapi hidup secara harmoni dan saling menghormati." },
+            { id: "C", text: "Percampuran biologi melalui perkahwinan campur yang melahirkan satu kelompok baharu." },
+            { id: "D", text: "Pemisahan kumpulan etnik berdasarkan tempat tinggal dan sistem pendidikan." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Definisi etiket menurut Kamus Dewan Edisi Keempat ialah \"adat dan peraturan bukan kesopanan (terutamanya dalam kehidupan sosial atau dalam profesion tertentu)\".",
+            correct: "Jawapan B adalah betul. Akomodasi (A+B+C = A+B+C) ialah proses di mana kumpulan etnik menyedari dan menghormati norma etnik lain tanpa menggugat identiti budaya sendiri.",
             incorrect: {
-                "A": "A adalah definisi 'Etika'.",
-                "C": "C adalah definisi 'Peradaban'.",
-                "D": "D adalah definisi 'Etos'."
+                "A": "Pilihan A adalah definisi 'asimilasi'.",
+                "C": "Pilihan C adalah definisi 'amalgamasi'.",
+                "D": "Pilihan D adalah definisi 'segregasi'."
             }
         }
     },
     {
         id: 12,
-        question: "Pada era prakolonial, konsep 'adab' dan 'adat' telah wujud dan mendukung sistem nilai dalam pemerintahan dan __________.",
+        question: "[Topik 3] Pembentukan masyarakat Baba dan Nyonya di Melaka adalah contoh terbaik bagi proses?",
         options: [
-            { id: "A", text: "Masyarakat moden" },
-            { id: "B", text: "Masyarakat industri" },
-            { id: "C", text: "Masyarakat tradisional" },
-            { id: "D", text: "Masyarakat digital" }
+            { id: "A", text: "Segregasi." },
+            { id: "B", text: "Akomodasi." },
+            { id: "C", text: "Akulturasi dan Amalgamasi." },
+            { id: "D", text: "Polarisasi." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 7 menyatakan bahawa pada era pra-kolonial, \"konsep ‘adab’ dan ‘adat’...telah wujud mendukung sistem nilai pemerintahan, masyarakat tradisional serta peradaban\".",
+            correct: "Jawapan C adalah betul. Proses ini melibatkan 'akulturasi' (penerimaan unsur budaya Melayu) dan 'amalgamasi' (perkahwinan campur antara pedagang Cina dengan wanita tempatan).",
             incorrect: {
-                "A": "Pilihan A, B, dan D merujuk kepada bentuk masyarakat pada era yang lebih lewat, terutamanya era kolonial dan pascakolonial.",
-                "B": "Pilihan A, B, dan D merujuk kepada bentuk masyarakat pada era yang lebih lewat, terutamanya era kolonial dan pascakolonial.",
-                "D": "Pilihan A, B, dan D merujuk kepada bentuk masyarakat pada era yang lebih lewat, terutamanya era kolonial dan pascakolonial."
+                "A": "Pilihan A salah. Segregasi ialah pemisahan, bukan percantuman.",
+                "B": "Pilihan B salah. Akomodasi melibatkan pengekalan budaya asal.",
+                "D": "Pilihan D salah. Polarisasi merujuk kepada proses pengasingan antara kumpulan."
             }
         }
     },
     {
         id: 13,
-        question: "Selat Melaka memainkan peranan penting pada era prakolonial sebagai laluan yang menemukan peradaban Alam Melayu dengan peradaban-peradaban berikut KECUALI:",
+        question: "[Topik 3] Dasar Ekonomi Baru (DEB) mempunyai dua objektif utama. Apakah objektif tersebut?",
         options: [
-            { id: "A", text: "India" },
-            { id: "B", text: "Cina" },
-            { id: "C", text: "Timur Tengah" },
-            { id: "D", text: "Eropah" }
+            { id: "A", text: "Memajukan sektor perindustrian dan mengurangkan import." },
+            { id: "B", text: "Membasmi kemiskinan tanpa mengira kaum dan menyusun semula masyarakat." },
+            { id: "C", text: "Meningkatkan pelaburan asing dan memodenkan sektor pertanian." },
+            { id: "D", text: "Memperkenalkan sistem pendidikan vernakular dan menggalakkan perniagaan kecil." }
         ],
-        correctAnswer: "D",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah D. Sumber 1217 menyatakan pada era pra-kolonial, Selat Melaka menemukan peradaban \"India, Cina, Timur Tengah dan Alam Melayu\". Peradaban Eropah tiba kemudian pada era kolonial.",
+            correct: "Jawapan B adalah betul. DEB dirangka untuk menangani ketidakseimbangan ekonomi antara kaum melalui dua matlamat: membasmi kemiskinan dan menyusun semula masyarakat untuk menghapuskan pengenalan kaum mengikut fungsi ekonomi.",
             incorrect: {
-                "A": "A, B, dan C adalah peradaban yang berinteraksi di Alam Melayu melalui Selat Melaka sebelum kedatangan kuasa Eropah.",
-                "B": "A, B, dan C adalah peradaban yang berinteraksi di Alam Melayu melalui Selat Melaka sebelum kedatangan kuasa Eropah.",
-                "C": "A, B, dan C adalah peradaban yang berinteraksi di Alam Melayu melalui Selat Melaka sebelum kedatangan kuasa Eropah."
+                "A": "Pilihan A salah. Ini adalah strategi pembangunan ekonomi umum.",
+                "C": "Pilihan C salah. Ini bukan objektif teras DEB.",
+                "D": "Pilihan D salah. DEB tidak memperkenalkan sistem pendidikan vernakular."
             }
         }
     },
     {
         id: 14,
-        question: "Apakah yang dimaksudkan dengan 'superdiversity' dalam konteks masyarakat Malaysia hari ini?",
+        question: "[Topik 3] Apakah yang dimaksudkan dengan 'segregasi' dalam konteks hubungan etnik di Tanah Melayu semasa zaman penjajahan?",
         options: [
-            { id: "A", text: "Kepelbagaian masyarakat yang wujud semasa zaman Kesultanan Melayu Melaka." },
-            { id: "B", text: "Masyarakat majmuk yang terbentuk akibat migrasi buruh paksaan semasa penjajahan." },
-            { id: "C", text: "Kepelbagaian kompleks yang terbentuk pada era globalisasi dan dipacu oleh platform digital." },
-            { id: "D", text: "Kepelbagaian yang hanya merangkumi tiga etnik utama iaitu Melayu, Cina dan India." }
+            { id: "A", text: "Proses perkahwinan campur antara kaum." },
+            { id: "B", text: "Pemisahan kaum melalui dasar yang menetapkan perbezaan tempat tinggal, pekerjaan, dan pendidikan." },
+            { id: "C", text: "Penerimaan budaya kaum lain secara terbuka dalam kehidupan seharian." },
+            { id: "D", text: "Penyatuan semua kaum di bawah satu sistem politik yang seragam." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1221 menjelaskan bahawa pada era pasca-kolonial dan globalisasi, \"sifat kepelbagaian...menjadi semakin pekat dan ligat apatah lagi setelah platform digital terasas membentuk kepelbagaian yang sungguh kompleks, yang dipanggil sebagai superdiversity\".",
+            correct: "Jawapan B adalah betul. Dasar 'pecah dan perintah' oleh British mewujudkan segregasi, di mana kaum Melayu di kampung, India di estet, dan Cina di bandar, dengan sistem pendidikan yang berbeza.",
             incorrect: {
-                "A": "A dan B merujuk kepada bentuk kepelbagaian pada era prakolonial dan kolonial.",
-                "B": "A dan B merujuk kepada bentuk kepelbagaian pada era prakolonial dan kolonial.",
-                "D": "D salah kerana 'superdiversity' adalah lebih kompleks dan melangkaui hanya tiga etnik utama."
+                "A": "Pilihan A adalah amalgamasi.",
+                "C": "Pilihan C lebih menjurus kepada akomodasi atau akulturasi.",
+                "D": "Pilihan D salah. Penyatuan tidak berlaku; sebaliknya, pemisahan yang wujud."
             }
         }
     },
     {
         id: 15,
-        question: "Proses integrasi sehala yang menghasilkan satu kelompok masyarakat dengan satu budaya, satu bahasa, dan satu agama dikenali sebagai __________.",
+        question: "[Topik 3] Bagaimanakah kedudukan strategik Selat Melaka menyumbang kepada pembentukan masyarakat yang pelbagai?",
         options: [
-            { id: "A", text: "Akomodasi" },
-            { id: "B", text: "Akulturasi" },
-            { id: "C", text: "Amalgamasi" },
-            { id: "D", text: "Asimilasi" }
+            { id: "A", text: "Ia menjadi benteng pertahanan yang menghalang kemasukan orang luar." },
+            { id: "B", text: "Ia menjadi laluan perdagangan utama yang menemukan pelbagai peradaban." },
+            { id: "C", text: "Ia menggalakkan aktiviti perikanan sara diri sahaja." },
+            { id: "D", text: "Ia menyebabkan pengasingan antara penduduk Semenanjung dan Sumatera." }
         ],
-        correctAnswer: "D",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah D. Definisi yang diberikan dalam soalan adalah selaras dengan definisi Asimilasi dalam nota, iaitu \"proses integrasi sehala yang akan menghasilkan satu kelompok masyarakat yang mempunyai satu budaya, satu bahasa dan satu agama\".",
+            correct: "Jawapan B adalah betul. Sebagai laluan perkapalan tersibuk, Selat Melaka menjadi 'gelanggang kepelbagaian' di mana pedagang dari pelbagai peradaban bertemu, berinteraksi, dan menetap.",
             incorrect: {
-                "A": "Pilihan A, B, dan C adalah proses hubungan etnik yang berbeza.",
-                "B": "Pilihan A, B, dan C adalah proses hubungan etnik yang berbeza.",
-                "C": "Pilihan A, B, dan C adalah proses hubungan etnik yang berbeza."
+                "A": "Pilihan A salah. Selat Melaka adalah laluan terbuka.",
+                "C": "Pilihan C salah. Ia menggalakkan perdagangan antarabangsa.",
+                "D": "Pilihan D salah. Ia menghubungkan, bukan memisahkan."
             }
         }
     },
     {
         id: 16,
-        question: "Apakah usaha serius yang pertama kali dilaksanakan oleh Kerajaan Malaysia pada tahun 2017-2018 untuk memantau dan mengukur tahap perpaduan secara objektif?",
+        question: "[Topik 4] Apakah perbezaan antara konsep 'perpaduan' dan 'kesepaduan'?",
         options: [
-            { id: "A", text: "Penubuhan Jabatan Perpaduan Negara dan Integrasi Nasional (JPNIN)." },
-            { id: "B", text: "Pelancaran Rukun Negara." },
-            { id: "C", text: "Pembinaan Indeks Perpaduan Nasional (IPNas)." },
-            { id: "D", text: "Pengenalan Dasar Ekonomi Baru (DEB)." }
+            { id: "A", text: "Perpaduan adalah proses, manakala kesepaduan adalah matlamat." },
+            { id: "B", text: "Perpaduan adalah matlamat ideal, manakala kesepaduan adalah keadaan aman yang telah dicapai walaupun masih ada perbezaan." },
+            { id: "C", text: "Perpaduan merujuk kepada kesatuan politik, manakala kesepaduan merujuk kepada kesatuan ekonomi." },
+            { id: "D", text: "Tiada perbezaan antara kedua-dua konsep tersebut." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1543 dan 1615 secara spesifik menyatakan \"Tindakan membina Indeks Perpaduan Nasional (IPNas 2018) adalah suatu usaha serius untuk memantau pemantapan kesepaduan nasional\" dan ia merupakan yang \"pertama kali dalam sejarah Malaysia\".",
+            correct: "Jawapan B adalah betul. 'Perpaduan' (unity) adalah matlamat akhir yang ideal. 'Kesepaduan' (cohesion) pula adalah keadaan semasa yang realistik di mana masyarakat hidup aman walaupun masih wujud 'defisit sosial'.",
             incorrect: {
-                "A": "A, B, dan D adalah usaha-usaha penting untuk perpaduan, tetapi ia berlaku pada era yang lebih awal dan IPNas adalah usaha spesifik untuk 'mengukur' tahap perpaduan secara objektif.",
-                "B": "A, B, dan D adalah usaha-usaha penting untuk perpaduan, tetapi ia berlaku pada era yang lebih awal dan IPNas adalah usaha spesifik untuk 'mengukur' tahap perpaduan secara objektif.",
-                "D": "A, B, dan D adalah usaha-usaha penting untuk perpaduan, tetapi ia berlaku pada era yang lebih awal dan IPNas adalah usaha spesifik untuk 'mengukur' tahap perpaduan secara objektif."
+                "A": "Pilihan A salah. 'Penyatupaduan' adalah proses.",
+                "C": "Pilihan C salah. Kedua-dua konsep merangkumi semua aspek kehidupan.",
+                "D": "Pilihan D salah. Terdapat perbezaan konseptual yang penting."
             }
         }
     },
     {
         id: 17,
-        question: "'Detik Perpaduan' merujuk kepada saat-saat di mana perpaduan dapat dilihat dalam kehidupan seharian. Manakah antara berikut BUKAN contoh 'Detik Perpaduan' yang disebut dalam nota?",
+        question: "[Topik 4] Manakah antara berikut merupakan contoh 'detik perpaduan' dalam masyarakat Malaysia?",
         options: [
-            { id: "A", text: "Memberi bantuan ketika bencana." },
-            { id: "B", text: "Perdebatan politik di parlimen." },
-            { id: "C", text: "Sokongan bersama dalam sukan." },
-            { id: "D", text: "Pergaulan di majlis perkahwinan." }
+            { id: "A", text: "Perdebatan politik mengenai hak kaum di media sosial." },
+            { id: "B", text: "Rakyat berbilang kaum bersama-sama menyokong pasukan sukan negara." },
+            { id: "C", text: "Pilihan raya umum yang menyaksikan persaingan sengit." },
+            { id: "D", text: "Kewujudan sekolah aliran vernakular." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Nota menyenaraikan banyak contoh 'Detik Perpaduan' seperti \"pergaulan di pasar, mengadakan majlis perkahwinan, tempat makan, sokongan dalam sukan, memberi bantuan ketika bencana\". Perdebatan politik, walaupun sebahagian daripada proses demokrasi, sering kali menunjukkan perbezaan pandangan ('Detik Perbezaan') dan bukan 'detik perpaduan' dalam konteks yang sama.",
+            correct: "Jawapan B adalah betul. 'Detik perpaduan' adalah momen di mana perbezaan diketepikan dan masyarakat bersatu atas satu sentimen bersama, seperti menyokong pasukan Harimau Malaya.",
             incorrect: {
-                "A": "A, C, dan D adalah contoh-contoh spesifik 'Detik Perpaduan' yang disenaraikan dalam sumber.",
-                "C": "A, C, dan D adalah contoh-contoh spesifik 'Detik Perpaduan' yang disenaraikan dalam sumber.",
-                "D": "A, C, dan D adalah contoh-contoh spesifik 'Detik Perpaduan' yang disenaraikan dalam sumber."
+                "A": "Pilihan A sering menjadi 'detik perbezaan'.",
+                "C": "Pilihan C sering menonjolkan perbezaan ideologi.",
+                "D": "Pilihan D sering dilihat sebagai manifestasi 'defisit sosial'."
             }
         }
     },
     {
         id: 18,
-        question: "Apakah yang dimaksudkan dengan 'defisit sosial' dalam konteks kesepaduan?",
+        question: "[Topik 4] Apakah yang dimaksudkan dengan 'penyatupaduan'?",
         options: [
-            { id: "A", text: "Kekurangan dana kerajaan untuk program perpaduan." },
-            { id: "B", text: "Jurang pemisah antara golongan kaya dan miskin." },
-            { id: "C", text: "Perbezaan yang masih wujud dalam masyarakat yang aman dan stabil." },
-            { id: "D", text: "Pengurangan interaksi sosial akibat penggunaan teknologi." }
+            { id: "A", text: "Keadaan aman dan stabil yang telah dicapai oleh masyarakat." },
+            { id: "B", text: "Matlamat akhir kesatuan yang sempurna dalam masyarakat." },
+            { id: "C", text: "Usaha berterusan untuk mengurus dan menyelesaikan perbezaan atau 'defisit sosial'." },
+            { id: "D", text: "Proses pemisahan antara kumpulan etnik yang berbeza." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Definisi 'Kesepaduan' ialah \"keadaan aman, stabil, makmur dan sejahtera yang dicapai tetapi diakui masih terdapat perbezaan dalam bentuk defisit sosial yang wujud dalam sesebuah masyarakat\". Ini bermakna 'defisit sosial' ialah isu-isu atau perbezaan yang masih perlu diuruskan dalam kerangka kesepaduan.",
+            correct: "Jawapan C adalah betul. 'Penyatupaduan' (integration) adalah proses atau usaha berterusan untuk membina kesepaduan sosial melalui dialog, perundingan, dan mediasi.",
             incorrect: {
-                "A": "Pilihan A, B, dan D mungkin merupakan sebahagian daripada isu sosial, tetapi istilah 'defisit sosial' dalam konteks nota merujuk secara umum kepada ruang-ruang perbezaan (jurang pemisah) yang wujud dalam sebuah masyarakat yang telah mencapai kesepaduan.",
-                "B": "Pilihan A, B, dan D mungkin merupakan sebahagian daripada isu sosial, tetapi istilah 'defisit sosial' dalam konteks nota merujuk secara umum kepada ruang-ruang perbezaan (jurang pemisah) yang wujud dalam sebuah masyarakat yang telah mencapai kesepaduan.",
-                "D": "Pilihan A, B, dan D mungkin merupakan sebahagian daripada isu sosial, tetapi istilah 'defisit sosial' dalam konteks nota merujuk secara umum kepada ruang-ruang perbezaan (jurang pemisah) yang wujud dalam sebuah masyarakat yang telah mencapai kesepaduan."
+                "A": "Pilihan A adalah definisi 'kesepaduan'.",
+                "B": "Pilihan B adalah definisi 'perpaduan'.",
+                "D": "Pilihan D adalah 'segregasi'."
             }
         }
     },
     {
         id: 19,
-        question: "Apakah tiga rangkai proses yang memacu pemantapan kesepaduan nasional di Malaysia?",
+        question: "[Topik 4] Apakah yang dimaksudkan dengan 'defisit sosial' dalam kerangka kesepaduan nasional?",
         options: [
-            { id: "A", text: "Perpaduan, Keharmonian dan Toleransi" },
-            { id: "B", text: "Asimilasi, Akomodasi dan Akulturasi" },
-            { id: "C", text: "Perpaduan (diidamkan), Kesepaduan (dicapai) dan Penyatupaduan (diusahakan)" },
-            { id: "D", text: "Prakolonial, Kolonial dan Pascakolonial" }
+            { id: "A", text: "Lebihan bajet kerajaan dalam urusan sosial." },
+            { id: "B", text: "Kekurangan interaksi sosial dalam kalangan masyarakat moden." },
+            { id: "C", text: "Isu atau jurang perbezaan (bahasa, agama, etnisiti) yang perlu diuruskan untuk mengekalkan keharmonian." },
+            { id: "D", text: "Peningkatan jumlah penduduk yang menyebabkan masalah sosial." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1542 menyatakan, \"Ia dilaksana melalui tiga rangkai proses yang bergerak serentak dipacu oleh tiga motivasi, iaitu perpaduan yang diidamkan, kesepaduan yang dicapai dan penyatupaduan yang diusahakan\". Ini juga diringkaskan sebagai tiga lapisan perpaduan.",
+            correct: "Jawapan C adalah betul. 'Defisit sosial' merujuk kepada jurang dalam hubungan sosial disebabkan perbezaan pandangan dalam aspek kritikal seperti etnisiti, agama, dan bahasa, yang berpotensi mengganggu kesepaduan.",
             incorrect: {
-                "A": "Pilihan A, B, dan D adalah konsep-konsep penting dalam kursus ini, tetapi bukan 'tiga rangkai proses' spesifik yang dimaksudkan dalam Topik 4.",
-                "B": "Pilihan A, B, dan D adalah konsep-konsep penting dalam kursus ini, tetapi bukan 'tiga rangkai proses' spesifik yang dimaksudkan dalam Topik 4.",
-                "D": "Pilihan A, B, dan D adalah konsep-konsep penting dalam kursus ini, tetapi bukan 'tiga rangkai proses' spesifik yang dimaksudkan dalam Topik 4."
+                "A": "Pilihan A adalah istilah ekonomi.",
+                "B": "Pilihan B terlalu umum.",
+                "D": "Pilihan D adalah isu demografi."
             }
         }
     },
     {
         id: 20,
-        question: "Zaman Kesultanan Melayu Melaka dianggap sebagai lambang pertemuan masyarakat pelbagai etnik. Apakah bentuk masyarakat yang terbentuk pada zaman ini?",
+        question: "[Topik 4] Apakah peranan 'tapak integrasi' dalam proses penyatupaduan di Malaysia?",
         options: [
-            { id: "A", text: "Masyarakat majmuk" },
-            { id: "B", text: "Masyarakat plural" },
-            { id: "C", text: "Masyarakat pluraliti" },
-            { id: "D", text: "Masyarakat segregasi" }
+            { id: "A", text: "Tapak untuk membina bangunan fizikal." },
+            { id: "B", text: "Ruang dan titik pertemuan di mana pelbagai kelompok masyarakat dapat berinteraksi dan berunding." },
+            { id: "C", text: "Platform media sosial untuk menyebarkan propaganda politik." },
+            { id: "D", text: "Kawasan penempatan yang dikhaskan untuk satu kaum sahaja." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Nota membezakan antara 'pluraliti' dan 'majmuk'. Sumber 1476 menyatakan zaman Melaka \"merupakan zaman pluraliti (proses penghijrahan berlaku secara semulajadi tanpa paksaan)\". Sebaliknya, 'masyarakat majmuk' merujuk kepada era penjajah.",
+            correct: "Jawapan B adalah betul. 'Tapak integrasi' merujuk kepada platform atau institusi (seperti CLC, Perlembagaan) yang membolehkan interaksi dan kerjasama antara pelbagai kumpulan etnik dan sosial.",
             incorrect: {
-                "A": "A salah kerana istilah 'masyarakat majmuk' digunakan untuk merujuk era penjajahan di mana kemasukan pendatang adalah untuk kepentingan ekonomi penjajah.",
-                "B": "B salah kerana walaupun berkaitan, istilah yang lebih spesifik untuk zaman Melaka dalam nota ialah 'pluraliti'.",
-                "D": "D salah kerana Melaka adalah pusat pertemuan, bukan pemisahan (segregasi)."
+                "A": "Pilihan A adalah tafsiran literal yang tidak tepat.",
+                "C": "Pilihan C salah. Media sosial boleh menjadi tapak konflik.",
+                "D": "Pilihan D adalah konsep segregasi."
             }
         }
     },
     {
         id: 21,
-        question: "Siapakah tokoh sarjana Barat yang menganggap falsafah sejarah Ibn Khaldun sebagai sumbangan terbesar yang pernah dilahirkan oleh manusia?",
+        question: "[Topik 1] Manakah antara berikut BUKAN sebahagian daripada konsep etika yang diperkenalkan semasa era kolonial?",
         options: [
-            { id: "A", text: "G. Sarton" },
-            { id: "B", text: "R. Flint" },
-            { id: "C", text: "J.S. Furnivall" },
-            { id: "D", text: "Arnold Toynbee" }
+            { id: "A", text: "Etika" },
+            { id: "B", text: "Etos" },
+            { id: "C", text: "Etiket" },
+            { id: "D", text: "Adat Resam" }
         ],
         correctAnswer: "D",
         explanation: {
-            correct: "Jawapan yang betul ialah D. Sumber 1441 secara jelas memetik pandangan Arnold Toynbee: \"- falsafah sejarah yang dihasilkan Ibn Khaldun merupakan sumbangan terbesar pernah dilahirkan manusia di atas muka bumi ini\".",
+            correct: "Jawapan D adalah betul. Adat resam adalah sebahagian daripada etika tradisional yang telah wujud pada era prakolonial.",
             incorrect: {
-                "A": "A dan B juga merupakan sarjana Barat yang mengagumi Ibn Khaldun, tetapi pandangan spesifik dalam soalan adalah daripada Arnold Toynbee.",
-                "B": "A dan B juga merupakan sarjana Barat yang mengagumi Ibn Khaldun, tetapi pandangan spesifik dalam soalan adalah daripada Arnold Toynbee.",
-                "C": "C, J.S. Furnivall, adalah tokoh yang terkenal dengan konsep masyarakat plural."
+                "A": "Pilihan A salah. Etika adalah konsep yang dipopularkan semasa era kolonial.",
+                "B": "Pilihan B salah. Etos adalah konsep yang dipopularkan semasa era kolonial.",
+                "C": "Pilihan C salah. Etiket adalah konsep yang dipopularkan semasa era kolonial."
             }
         }
     },
     {
         id: 22,
-        question: "Pada era kolonial, British telah mengamalkan dasar pemisahan kuasa di Tanah Melayu. Dalam konteks ini, Sultan dikekalkan kuasanya dalam bidang __________.",
+        question: "[Topik 2] Apakah tujuan utama kedatangan kuasa Barat seperti Portugis ke Alam Melayu pada abad ke-16?",
         options: [
-            { id: "A", text: "Pentadbiran negara dan ekonomi" },
-            { id: "B", text: "Kehakiman, Eksekutif dan Perundangan" },
-            { id: "C", text: "Hal ehwal agama Islam dan adat istiadat Melayu" },
-            { id: "D", text: "Hubungan diplomatik dan pertahanan" }
+            { id: "A", text: "Mempelajari budaya dan adat resam masyarakat tempatan." },
+            { id: "B", text: "Menjalin hubungan diplomatik berasaskan kesamarataan." },
+            { id: "C", text: "Menguasai perdagangan rempah dan menyebarkan agama Kristian." },
+            { id: "D", text: "Membantu kerajaan Melaka meluaskan empayarnya." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1498 menerangkan bahawa British menguasai pentadbiran negara manakala \"Sultan menjaga hal ehwal agama Islam dan adat istiadat Melayu\".",
+            correct: "Jawapan C adalah betul. Kedatangan kuasa Eropah awal didorong oleh matlamat 'Gold, Gospel, and Glory' (Kekayaan, Keagamaan, dan Kemegahan).",
             incorrect: {
-                "A": "A, B, dan D adalah bidang-bidang kuasa yang diambil alih oleh pentadbiran British, manakala kuasa Sultan dihadkan kepada agama dan adat.",
-                "B": "A, B, dan D adalah bidang-bidang kuasa yang diambil alih oleh pentadbiran British, manakala kuasa Sultan dihadkan kepada agama dan adat.",
-                "D": "A, B, dan D adalah bidang-bidang kuasa yang diambil alih oleh pentadbiran British, manakala kuasa Sultan dihadkan kepada agama dan adat."
+                "A": "Pilihan A salah. Ini bukan tujuan utama mereka.",
+                "B": "Pilihan B salah. Hubungan yang terjalin adalah penaklukan.",
+                "D": "Pilihan D salah. Portugis menyerang dan menakluk Melaka."
             }
         }
     },
     {
         id: 23,
-        question: "Apakah dua unsur etika yang telah wujud pada era prakolonial di wilayah Alam Melayu?",
+        question: "[Topik 3] Apakah proses yang berlaku apabila unsur kebudayaan asing diterima dan diolah untuk disesuaikan dengan kebudayaan sendiri?",
         options: [
-            { id: "A", text: "Etika dan Etos" },
-            { id: "B", text: "Adab dan Adat" },
-            { id: "C", text: "Etos dan Etiket" },
-            { id: "D", text: "Adab dan Etika" }
+            { id: "A", text: "Asimilasi" },
+            { id: "B", text: "Amalgamasi" },
+            { id: "C", text: "Akulturasi" },
+            { id: "D", text: "Segregasi" }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 7 menyatakan, \"Sebelumnya, pada era pra-kolonial, dalam wilayah Alam Melayu, konsep ‘adab’ dan ‘adat’ (adat istiadat dan adat resam), merupakan sebahagian daripada bentuk etika ketika itu\".",
+            correct: "Jawapan C adalah betul. Akulturasi ialah proses peminjaman dan penerimaan unsur budaya asing yang kemudiannya disesuaikan dengan budaya sendiri tanpa kehilangan identiti asal.",
             incorrect: {
-                "A": "A, C, dan D mengandungi istilah seperti 'Etika', 'Etos', dan 'Etiket' yang diperkenalkan pada era kolonial.",
-                "C": "A, C, dan D mengandungi istilah seperti 'Etika', 'Etos', dan 'Etiket' yang diperkenalkan pada era kolonial.",
-                "D": "A, C, dan D mengandungi istilah seperti 'Etika', 'Etos', dan 'Etiket' yang diperkenalkan pada era kolonial."
+                "A": "Pilihan A melibatkan kehilangan identiti asal.",
+                "B": "Pilihan B ialah percantuman biologi.",
+                "D": "Pilihan D ialah pemisahan."
             }
         }
     },
     {
         id: 24,
-        question: "Menurut J.S. Furnivall, masyarakat plural didefinisikan sebagai masyarakat yang...",
+        question: "[Topik 4] Mengapakah tragedi 13 Mei 1969 menjadi titik perubahan penting dalam wacana perpaduan di Malaysia?",
         options: [
-            { id: "A", text: "bercampur dan bersatu padu membentuk budaya baru." },
-            { id: "B", text: "hidup bersama dalam harmoni dan saling menghormati." },
-            { id: "C", text: "bercampur tetapi tidak bersatu, hidup berdekatan tetapi terpisah." },
-            { id: "D", text: "terasing sepenuhnya dari segi geografi dan pentadbiran." }
+            { id: "A", text: "Ia menandakan berakhirnya zaman penjajahan British." },
+            { id: "B", text: "Ia menyebabkan perkataan 'Kesatuan' digantikan dengan 'Perpaduan' dalam dokumen rasmi negara." },
+            { id: "C", text: "Ia membawa kepada pembentukan Malaysia." },
+            { id: "D", text: "Ia berjaya menghapuskan semua perbezaan kaum." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1276 memberikan definisi J.S. Furnivall: \"Masyarakat plural adalah bercampur antara satu sama lain tetapi tidak bersatu\". Sumber 1277 menghuraikan lagi \"Mereka hidup berdekatan tetapi tidak terpisah dengan sistem politik yang sama serta masing-masing berpegang kepada kebudayaan, agama, bahasa dan pemikiran sendiri\".",
+            correct: "Jawapan B adalah betul. Selepas peristiwa 13 Mei 1969, kerajaan menyedari 'kesatuan' sedia ada rapuh, dan istilah 'perpaduan' mula digunakan untuk menggambarkan matlamat yang lebih mendalam.",
             incorrect: {
-                "A": "A lebih merujuk kepada amalgamasi atau asimilasi.",
-                "B": "B merujuk kepada akomodasi atau matlamat perpaduan.",
-                "D": "D merujuk kepada segregasi sepenuhnya."
+                "A": "Pilihan A salah. Kemerdekaan dicapai pada 1957.",
+                "C": "Pilihan C salah. Pembentukan Malaysia berlaku pada 1963.",
+                "D": "Pilihan D salah. Ia menonjolkan betapa dalamnya perbezaan kaum."
             }
         }
     },
     {
         id: 25,
-        question: "Konsep 'penyatupaduan' dalam kerangka perpaduan Malaysia merujuk kepada...",
+        question: "[Topik 1] Penghayatan etika pada peringkat individu, keluarga, dan komuniti adalah analisis berdasarkan kerangka?",
         options: [
-            { id: "A", text: "matlamat akhir perpaduan yang ingin dicapai." },
-            { id: "B", text: "keadaan aman dan stabil sedia ada." },
-            { id: "C", text: "detik-detik kebersamaan dalam sukan dan perayaan." },
-            { id: "D", text: "usaha berterusan untuk menyelesaikan defisit sosial melalui perundingan." }
+            { id: "A", text: "Sejarah" },
+            { id: "B", text: "Struktur Sosial" },
+            { id: "C", text: "Biografi" },
+            { id: "D", text: "Ekonomi" }
         ],
-        correctAnswer: "D",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah D. 'Penyatupaduan' didefinisikan sebagai \"usaha berterusan pada peringkat semua lapisan masyarakat untuk menyelesaikan defisit sosial berwahanakan tapak integrasi berprinsipkan tawar-menawar, perundingan dan mediasi\". Ia adalah 'Proses Diusaha'.",
+            correct: "Jawapan C adalah betul. Analisis yang bermula dari unit terkecil (individu) dan berkembang kepada unit terdekat (keluarga, komuniti) adalah sebahagian daripada kerangka biografi.",
             incorrect: {
-                "A": "A ialah definisi 'Perpaduan'.",
-                "B": "B ialah definisi 'Kesepaduan'.",
-                "C": "C ialah contoh 'Detik Perpaduan'."
+                "A": "Pilihan A salah. Kerangka sejarah melihat susur masa.",
+                "B": "Pilihan B salah. Kerangka struktur sosial melihat institusi besar.",
+                "D": "Pilihan D salah. Ekonomi adalah sebahagian daripada kerangka struktur sosial."
             }
         }
     },
     {
         id: 26,
-        question: "Perlembagaan Melaka yang diguna pakai semasa zaman kesultanannya adalah berdasarkan __________.",
+        question: "[Topik 2] Apakah sumbangan utama peradaban India kepada Alam Melayu dalam aspek pemerintahan?",
         options: [
-            { id: "A", text: "Adat Temenggung" },
-            { id: "B", text: "Undang-undang British" },
-            { id: "C", text: "Ajaran Islam" },
-            { id: "D", text: "Tradisi Hindu-Buddha" }
+            { id: "A", text: "Pengenalan sistem demokrasi berparlimen." },
+            { id: "B", text: "Pengenalan konsep 'daulat' dan institusi pemerintahan beraja." },
+            { id: "C", text: "Pengenalan tulisan Jawi." },
+            { id: "D", text: "Pengenalan sistem perundangan sivil." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1461 dalam slaid mengenai Kesultanan Melayu Melaka menyatakan, \"Perlembagaan Melaka berdasarkan ajaran Islam\". Ini diperkukuhkan lagi dengan kewujudan Hukum Kanun Melaka dan Undang-Undang Laut Melaka.",
+            correct: "Jawapan B adalah betul. Kerajaan-kerajaan awal di Alam Melayu banyak dipengaruhi oleh model pemerintahan dari India, termasuk konsep raja sebagai jelmaan tuhan (dewa-raja) yang kemudiannya diadaptasi kepada konsep 'daulat'.",
             incorrect: {
-                "A": "A dan D mempunyai pengaruh, tetapi asas utama perlembagaan yang dinyatakan ialah ajaran Islam.",
-                "B": "B adalah tidak relevan kerana British datang jauh selepas era Kesultanan Melaka.",
-                "D": "A dan D mempunyai pengaruh, tetapi asas utama perlembagaan yang dinyatakan ialah ajaran Islam."
+                "A": "Pilihan A adalah warisan British.",
+                "C": "Pilihan C berasal dari pengaruh Arab-Islam.",
+                "D": "Pilihan D adalah warisan British."
             }
         }
     },
     {
         id: 27,
-        question: "Apakah proses hubungan etnik yang diwakili oleh formula 'A + B + C = D'?",
+        question: "[Topik 3] Manakah ciri utama masyarakat plural (majmuk) menurut J.S. Furnivall?",
         options: [
-            { id: "A", text: "Asimilasi" },
-            { id: "B", text: "Akomodasi" },
-            { id: "C", text: "Amalgamasi" },
-            { id: "D", text: "Akulturasi" }
+            { id: "A", text: "Kumpulan etnik bercampur dan bersatu padu sepenuhnya." },
+            { id: "B", text: "Kumpulan etnik hidup berdekatan tetapi terpisah, dengan setiap kumpulan berpegang pada budaya sendiri." },
+            { id: "C", text: "Kumpulan etnik berkongsi satu bahasa dan agama yang sama." },
+            { id: "D", text: "Kumpulan etnik bekerjasama untuk membentuk satu identiti nasional yang tunggal." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Formula ini menunjukkan kumpulan etnik A, B, dan C bercampur untuk membentuk satu kumpulan baru D, yang selaras dengan definisi amalgamasi iaitu percantuman biologi (kahwin campur) yang membentuk ras dan budaya baharu.",
+            correct: "Jawapan B adalah betul. Menurut Furnivall, masyarakat majmuk dicirikan oleh percampuran pelbagai kaum di satu tempat tetapi mereka tidak bersatu, hidup dalam dunia sosial yang berasingan.",
             incorrect: {
-                "A": "Asimilasi diwakili formula A+B+C = A.",
-                "B": "Akomodasi diwakili formula A+B+C = A+B+C.",
-                "D": "Akulturasi diwakili formula A+B+C = A**+B**+C**."
+                "A": "Pilihan A salah. Furnivall berpendapat mereka tidak bersatu.",
+                "C": "Pilihan C salah. Ciri masyarakat majmuk ialah kepelbagaian bahasa dan agama.",
+                "D": "Pilihan D salah. Identiti nasional yang tunggal sukar dibentuk dalam model ini."
             }
         }
     },
     {
         id: 28,
-        question: "Pengaruh peradaban Barat ke Alam Melayu telah membawa kepada pemisahan antara agama dan politik. Idea ini berakar umbi dari gerakan __________ di Eropah.",
+        question: "[Topik 4] Apakah yang dimaksudkan dengan 'etos nasional'?",
         options: [
-            { id: "A", text: "Revolusi Industri" },
-            { id: "B", text: "Enlightenment" },
-            { id: "C", text: "Merkantilisme" },
-            { id: "D", text: "Renaissance" }
+            { id: "A", text: "Undang-undang tertinggi negara." },
+            { id: "B", text: "Ciri-ciri unik, nilai, dan kepercayaan bersama yang menjadi identiti sesebuah bangsa." },
+            { id: "C", text: "Dasar ekonomi yang diamalkan oleh sesebuah negara." },
+            { id: "D", text: "Bahasa rasmi yang digunakan dalam pentadbiran." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 1000 menyatakan bahawa era \"Englightenment\" membawa kepada \"Reformasi Gereja... Pemisahan agama daripada politik\". Konsep ini kemudiannya dibawa ke Tanah Melayu oleh British.",
+            correct: "Jawapan B adalah betul. 'Etos nasional' merujuk kepada semangat atau ciri-ciri bersama yang dikongsi oleh rakyat sesebuah negara yang melangkaui perbezaan etnik.",
             incorrect: {
-                "A": "A lebih kepada perubahan ekonomi dan teknologi.",
-                "C": "C dan D adalah era-era penting di Eropah, tetapi 'Enlightenment' secara spesifik dikaitkan dengan pemisahan kuasa gereja dan negara.",
-                "D": "C dan D adalah era-era penting di Eropah, tetapi 'Enlightenment' secara spesifik dikaitkan dengan pemisahan kuasa gereja dan negara."
+                "A": "Pilihan A merujuk kepada Perlembagaan.",
+                "C": "Pilihan C adalah dasar fiskal atau monetari.",
+                "D": "Pilihan D adalah salah satu komponen etos nasional, tetapi bukan definisinya."
             }
         }
     },
     {
         id: 29,
-        question: "Apakah tujuan utama penubuhan 'Communities Liaison Committee' (CLC) pada tahun 1949?",
+        question: "[Topik 1] Zaman Pascakolonial di Malaysia dicirikan oleh...",
         options: [
-            { id: "A", text: "Untuk menentang pembentukan Malayan Union." },
-            { id: "B", text: "Untuk merangka perlembagaan bagi kemerdekaan." },
-            { id: "C", text: "Sebagai ruang dan titik pertemuan antara pimpinan elit pelbagai kaum." },
-            { id: "D", text: "Untuk menguruskan pilihan raya pertama." }
+            { id: "A", text: "Penolakan sepenuhnya terhadap semua nilai tradisional." },
+            { id: "B", text: "Penerimaan sepenuhnya terhadap semua nilai Barat." },
+            { id: "C", text: "Percampuran dan penyesuaian nilai etika tradisional dan moden." },
+            { id: "D", text: "Kembali kepada sistem pemerintahan sebelum zaman penjajahan." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. CLC 1949 disenaraikan sebagai salah satu 'Tapak Integrasi' terawal, yang berfungsi sebagai ruang pertemuan \"pimpinan elit kaum2\" untuk berunding dan mencari persefahaman.",
+            correct: "Jawapan C adalah betul. Zaman pascakolonial menyaksikan proses 'bercampur gaul' di mana pelbagai bentuk etika wujud bersama dan saling mempengaruhi, membentuk 'acuan Malaysia'.",
             incorrect: {
-                "A": "A, B, dan D adalah peristiwa penting dalam sejarah Malaysia, tetapi fungsi spesifik CLC adalah sebagai platform perundingan elit kaum.",
-                "B": "A, B, dan D adalah peristiwa penting dalam sejarah Malaysia, tetapi fungsi spesifik CLC adalah sebagai platform perundingan elit kaum.",
-                "D": "A, B, dan D adalah peristiwa penting dalam sejarah Malaysia, tetapi fungsi spesifik CLC adalah sebagai platform perundingan elit kaum."
+                "A": "Pilihan A salah. Nilai tradisional masih diamalkan.",
+                "B": "Pilihan B salah. Nilai Barat diterima secara terpilih.",
+                "D": "Pilihan D salah. Sistem pemerintahan moden diteruskan."
             }
         }
     },
     {
         id: 30,
-        question: "'Etos' dari sudut sosiologi merujuk kepada...",
+        question: "[Topik 2] Revolusi Industri di Eropah membawa kepada kemunculan fahaman...",
         options: [
-            { id: "A", text: "Prinsip moral yang menjadi pegangan individu." },
-            { id: "B", text: "Adat sopan santun dalam interaksi sosial." },
-            { id: "C", text: "Usaha membangunkan bangsa berdasarkan kepelbagaian latar belakang melebihi kesepakatan ciri asas negara." },
-            { id: "D", text: "Peraturan rasmi dalam sesuatu majlis atau profesion." }
+            { id: "A", text: "Kolektivisme dan kebergantungan kepada komuniti." },
+            { id: "B", text: "Individualisme, hak asasi, dan demokrasi." },
+            { id: "C", text: "Teokrasi, di mana kuasa politik dipegang oleh pemimpin agama." },
+            { id: "D", text: "Feudalisme, yang menekankan pemilikan tanah oleh bangsawan." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 93 memberikan definisi 'Etos' dari sudut sosiologi sebagai \"Usaha membangunkan bangsa berdasarkan latar individu, keluarga dan komuniti berbagai serta berbeza sejarah, etnik, bahasa, agama, budaya dan latar geografi melebihi kesepakatan ciri asas negara atau bangsa\".",
+            correct: "Jawapan B adalah betul. Perkembangan ekonomi semasa Revolusi Industri memperkukuh idea-idea tentang hak individu, kebebasan peribadi, dan hak bersuara dalam pemerintahan.",
             incorrect: {
-                "A": "A merujuk kepada 'Etika'.",
-                "B": "B dan D lebih merujuk kepada 'Etiket'.",
-                "D": "B dan D lebih merujuk kepada 'Etiket'."
+                "A": "Pilihan A salah. Revolusi Industri menggalakkan persaingan individu.",
+                "C": "Pilihan C salah. Fahaman ini merosot selepas zaman Enlightenment.",
+                "D": "Pilihan D salah. Sistem ini digantikan oleh kapitalisme industri."
             }
         }
     },
     {
         id: 31,
-        question: "Zaman di mana negara ini belum dijajah dan etika terjelma dalam bentuk adab, adat resam dan adat istiadat dikenali sebagai zaman __________.",
+        question: "[Topik 3] Apakah matlamat utama Falsafah dan Pemikiran Tradisional seperti yang dihuraikan oleh Ibn Khaldun?",
         options: [
-            { id: "A", text: "Pascakolonial" },
-            { id: "B", text: "Kolonial" },
-            { id: "C", text: "Prakolonial" },
-            { id: "D", text: "Moden" }
+            { id: "A", text: "Manusia berhak menentukan matlamat hidupnya sendiri." },
+            { id: "B", text: "Mengintegrasikan ilmu agama dengan ilmu alat (logik, matematik) untuk mencapai matlamat yang ditetapkan." },
+            { id: "C", text: "Menolak sepenuhnya ilmu agama dalam pencarian kebenaran." },
+            { id: "D", text: "Mengutamakan pembangunan material melebihi pembangunan rohani." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 106 mendefinisikan zaman Prakolonial sebagai \"zaman negara ini belum dikenali sebagai Malaysia dan belum dijajah\" dan pada ketika itu, etika dikenali sebagai \"adab, adat resam dan adat istiadat\".",
+            correct: "Jawapan B adalah betul. Pemikiran tradisional, seperti Ibn Khaldun, berpandangan bahawa manusia perlu menggunakan pelbagai jenis ilmu secara bersepadu untuk mencapai matlamat yang telah ditetapkan oleh Tuhan.",
             incorrect: {
-                "A": "A, B, dan D adalah era-era berikutnya yang mempunyai ciri-ciri etika yang berbeza.",
-                "B": "A, B, dan D adalah era-era berikutnya yang mempunyai ciri-ciri etika yang berbeza.",
-                "D": "A, B, dan D adalah era-era berikutnya yang mempunyai ciri-ciri etika yang berbeza."
+                "A": "Pilihan A adalah ciri Falsafah Moden.",
+                "C": "Pilihan C salah. Ibn Khaldun sangat menekankan kepentingan ilmu agama.",
+                "D": "Pilihan D salah. Pembangunan rohani dan material perlu seimbang."
             }
         }
     },
     {
         id: 32,
-        question: "Apakah antara sumbangan penting tamadun India dalam bidang sains dan teknologi yang disebut dalam nota?",
+        question: "[Topik 4] Apakah yang boleh dianggap sebagai 'detik perbezaan' dalam konteks hubungan sosial di Malaysia?",
         options: [
-            { id: "A", text: "Penciptaan kertas dan bahan letupan." },
-            { id: "B", text: "Pengenalan sistem nombor termasuk angka perpuluhan." },
-            { id: "C", text: "Pembinaan piramid dan proses pengawetan." },
-            { id: "D", text: "Pembangunan enjin stim dan jentera." }
+            { id: "A", text: "Majlis rumah terbuka semasa perayaan." },
+            { id: "B", text: "Aktiviti gotong-royong membersihkan kawasan kejiranan." },
+            { id: "C", text: "Tularnya isu-isu sensitif berkaitan kaum dan agama di media sosial." },
+            { id: "D", text: "Perlawanan badminton di mana pemain dari kaum berbeza berganding." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 719-720 menyatakan bahawa \"Ahli matematik india telah mengetahui tentang konsep geometri - mendorongnya memperkenalkan sistem nombor... yang mencecah ke angka perpuluhan\".",
+            correct: "Jawapan C adalah betul. 'Detik perbezaan' adalah situasi yang menonjolkan perbezaan dan boleh mencetuskan ketegangan. Penyebaran isu sensitif di media sosial sering memburukkan keadaan.",
             incorrect: {
-                "A": "A adalah sumbangan tamadun China.",
-                "C": "C adalah sumbangan tamadun Mesir Purba.",
-                "D": "D merujuk kepada Revolusi Industri di Barat."
+                "A": "Pilihan A adalah contoh 'detik perpaduan'.",
+                "B": "Pilihan B adalah contoh 'detik perpaduan'.",
+                "D": "Pilihan D adalah contoh 'detik perpaduan'."
             }
         }
     },
     {
         id: 33,
-        question: "Proses penerimaan unsur kebudayaan daripada kebudayaan lain yang berbeza di mana identiti asal diolah bersama budaya asing dikenali sebagai __________.",
+        question: "[Topik 1] Apakah yang dimaksudkan dengan 'etos' dari sudut pandang sosiologi?",
         options: [
-            { id: "A", text: "Akulturasi" },
-            { id: "B", text: "Asimilasi" },
-            { id: "C", text: "Akomodasi" },
-            { id: "D", text: "Segregasi" }
+            { id: "A", text: "Peraturan kesopanan di meja makan." },
+            { id: "B", text: "Usaha membina bangsa berdasarkan kepelbagaian latar belakang melebihi kesepakatan ciri asas." },
+            { id: "C", text: "Undang-undang formal yang termaktub dalam perlembagaan." },
+            { id: "D", text: "Adat yang berkaitan dengan upacara perkahwinan." }
         ],
-        correctAnswer: "A",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah A. Ia didefinisikan sebagai \"proses penerimaan unsur kebudayaan dalam kalangan individu atau kelompok daripada sesuatu kebudayaan lain yang berbeza\" di mana \"Identiti asal + budaya asing = diolah dalam kebudayaan sendiri\".",
+            correct: "Jawapan B adalah betul. Dalam sosiologi, 'etos' merujuk kepada pembentukan karakter kebangsaan yang dibina daripada kepelbagaian yang wujud dalam masyarakat.",
             incorrect: {
-                "B": "B, C, dan D adalah konsep hubungan etnik yang berbeza. Asimilasi menghapuskan identiti asal, akomodasi mengekalkan identiti asal, dan segregasi memisahkan terus.",
-                "C": "B, C, dan D adalah konsep hubungan etnik yang berbeza. Asimilasi menghapuskan identiti asal, akomodasi mengekalkan identiti asal, dan segregasi memisahkan terus.",
-                "D": "B, C, dan D adalah konsep hubungan etnik yang berbeza. Asimilasi menghapuskan identiti asal, akomodasi mengekalkan identiti asal, dan segregasi memisahkan terus."
+                "A": "Pilihan A adalah etiket.",
+                "C": "Pilihan C adalah perundangan.",
+                "D": "Pilihan D adalah adat resam."
             }
         }
     },
     {
         id: 34,
-        question: "Manakah antara berikut BUKAN sebahagian daripada Negeri-Negeri Selat (NNS)?",
+        question: "[Topik 2] Apakah kesan pemisahan antara agama dan sains di Eropah terhadap dasar penjajahan British di Tanah Melayu?",
         options: [
-            { id: "A", text: "Singapura" },
-            { id: "B", text: "Perak" },
-            { id: "C", text: "Pulau Pinang" },
-            { id: "D", text: "Melaka" }
+            { id: "A", text: "British menggabungkan pentadbiran negara dengan undang-undang Islam." },
+            { id: "B", text: "British menggalakkan perdebatan terbuka antara sains dan agama." },
+            { id: "C", text: "British meneruskan dasar pemisahan agama dari pentadbiran negara." },
+            { id: "D", text: "British mengharamkan amalan semua agama selain Kristian." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Perak merupakan sebahagian daripada Negeri-Negeri Melayu Bersekutu (NNMB). Sumber 913 menyatakan NNS terdiri daripada \"Singapura, Pulau Pinang dan Melaka\".",
+            correct: "Jawapan C adalah betul. Pemikiran sekular yang memisahkan agama dan pentadbiran yang berlaku di Eropah telah diterapkan oleh British di Tanah Melayu, membawa kepada struktur pentadbiran dualisme.",
             incorrect: {
-                "A": "A, C, dan D adalah komponen utama Negeri-Negeri Selat.",
-                "C": "A, C, dan D adalah komponen utama Negeri-Negeri Selat.",
-                "D": "A, C, dan D adalah komponen utama Negeri-Negeri Selat."
+                "A": "Pilihan A salah. British melakukan yang sebaliknya.",
+                "B": "Pilihan B salah. Ini bukan fokus sistem pendidikan kolonial.",
+                "D": "Pilihan D salah. British membenarkan amalan agama lain."
             }
         }
     },
     {
         id: 35,
-        question: "Pada era kolonial, kemasukan tenaga buruh secara besar-besaran dari China dan India oleh British adalah untuk bekerja di sektor __________.",
+        question: "[Topik 3] Proses percantuman biologi melalui perkahwinan campur antara etnik yang berbeza dikenali sebagai?",
         options: [
-            { id: "A", text: "Pertanian sara diri dan perikanan." },
-            { id: "B", text: "Pentadbiran awam dan pendidikan." },
-            { id: "C", text: "Lombong bijih timah dan ladang getah." },
-            { id: "D", text: "Pembinaan kapal dan perdagangan maritim." }
+            { id: "A", text: "Akomodasi" },
+            { id: "B", text: "Akulturasi" },
+            { id: "C", text: "Asimilasi" },
+            { id: "D", text: "Amalgamasi" }
         ],
-        correctAnswer: "C",
+        correctAnswer: "D",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1407 menyatakan pada era kolonial, British menguasai ekonomi dengan \"pembukaan lombong bijih timah dan ladang getah serta kemasukan tenaga buruh secara besar-besaran dari China dan India\".",
+            correct: "Jawapan D adalah betul. Amalgamasi (A+B+C = D) secara spesifik merujuk kepada proses percantuman biologi (kahwin campur) yang melahirkan generasi baharu.",
             incorrect: {
-                "A": "A adalah ciri ekonomi era prakolonial.",
-                "B": "B dan D bukan sektor utama yang mendorong kemasukan buruh tersebut.",
-                "D": "B dan D bukan sektor utama yang mendorong kemasukan buruh tersebut."
+                "A": "Pilihan A adalah penyesuaian tanpa percantuman.",
+                "B": "Pilihan B adalah penerimaan unsur budaya.",
+                "C": "Pilihan C adalah penyerapan budaya."
             }
         }
     },
     {
         id: 36,
-        question: "Apakah nama perjanjian pada tahun 1824 yang mengesahkan pembahagian pengaruh antara Inggeris dan Belanda di Alam Melayu?",
+        question: "[Topik 4] Indeks Perpaduan Nasional (IPNas) dibina untuk tujuan apa?",
         options: [
-            { id: "A", text: "Perjanjian Pangkor" },
-            { id: "B", text: "Perjanjian Burney" },
-            { id: "C", text: "Perjanjian Bangkok" },
-            { id: "D", text: "Perjanjian Inggeris-Belanda (Perjanjian London)" }
+            { id: "A", text: "Mengira jumlah penduduk setiap kaum." },
+            { id: "B", text: "Menentukan parti politik mana yang paling menyumbang kepada perpaduan." },
+            { id: "C", text: "Mengukur tahap perpaduan dalam kepelbagaian secara objektif." },
+            { id: "D", text: "Menyenaraikan semua 'detik perbezaan' dalam sejarah." }
         ],
-        correctAnswer: "D",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah D. Sumber 901 menyatakan penjajahan Belanda berakhir dan pendudukan Inggeris disahkan melalui \"Perjanjian Inggeris-Belanda (Perjanjian London) pada tahun 1824\".",
+            correct: "Jawapan C adalah betul. IPNas adalah usaha saintifik untuk mengukur secara kuantitatif tahap kesepaduan sosial yang wujud di Malaysia bagi membolehkan intervensi yang sesuai dirangka.",
             incorrect: {
-                "A": "A ialah perjanjian campur tangan Inggeris di Perak.",
-                "B": "B dan C adalah perjanjian antara Inggeris dengan Siam.",
-                "C": "B dan C adalah perjanjian antara Inggeris dengan Siam."
+                "A": "Pilihan A adalah tugas Jabatan Perangkaan.",
+                "B": "Pilihan B salah. IPNas adalah kajian akademik.",
+                "D": "Pilihan D salah. Tujuannya adalah untuk mengukur keadaan semasa."
             }
         }
     },
     {
         id: 37,
-        question: "'Tapak Integrasi' dalam konteks sejarah Malaysia merujuk kepada...",
+        question: "[Topik 1] Manakah antara berikut menggambarkan penghayatan etika dalam konteks 'pasaran'?",
         options: [
-            { id: "A", text: "Kawasan penempatan kaum tertentu." },
-            { id: "B", text: "Ruang dan titik pertemuan antara kelompok strategik untuk berunding." },
-            { id: "C", text: "Dasar-dasar kerajaan yang bersifat perpaduan." },
-            { id: "D", text: "Simbol-simbol kenegaraan seperti bendera dan lagu." }
+            { id: "A", text: "Seorang anak menghormati ibu bapanya." },
+            { id: "B", text: "Sebuah syarikat mengamalkan tadbir urus korporat yang baik." },
+            { id: "C", text: "Penduduk sebuah taman mengadakan gotong-royong." },
+            { id: "D", text: "Seorang pemimpin negara menyampaikan ucapan hari kebangsaan." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 1594 mendefinisikan 'TAPAK INTEGRASI' sebagai \"Ruang dan titik pertemuan antara kelompok strategik di Malaysia (etnik, agama, parti politik, NGO, masyarakat sivil dll.), pelbagai bentuk\". Contohnya ialah CLC dan parti politik bersifat muafakat.",
+            correct: "Jawapan B adalah betul. Konteks 'pasaran' merujuk kepada dunia perniagaan dan ekonomi. Etika dalam konteks ini termasuklah kejujuran dalam perniagaan dan tanggungjawab sosial korporat (CSR).",
             incorrect: {
-                "A": "Pilihan A, C, dan D adalah elemen-elemen berkaitan perpaduan tetapi tidak merujuk secara spesifik kepada konsep 'Tapak Integrasi' seperti yang didefinisikan.",
-                "C": "Pilihan A, C, dan D adalah elemen-elemen berkaitan perpaduan tetapi tidak merujuk secara spesifik kepada konsep 'Tapak Integrasi' seperti yang didefinisikan.",
-                "D": "Pilihan A, C, dan D adalah elemen-elemen berkaitan perpaduan tetapi tidak merujuk secara spesifik kepada konsep 'Tapak Integrasi' seperti yang didefinisikan."
+                "A": "Pilihan A adalah etika dalam konteks keluarga.",
+                "C": "Pilihan C adalah etika dalam konteks komuniti.",
+                "D": "Pilihan D adalah etika dalam konteks negara."
             }
         }
     },
     {
         id: 38,
-        question: "Zaman Proto Sejarah di Alam Melayu ditandai dengan kewujudan __________.",
+        question: "[Topik 2] Apakah yang dimaksudkan dengan 'lingua franca'?",
         options: [
-            { id: "A", text: "Petempatan awal zaman Paleolitik." },
-            { id: "B", text: "Kerajaan purba seperti Langkasuka dan Gangga Negara." },
-            { id: "C", text: "Kerajaan Kesultanan Melayu Melaka." },
-            { id: "D", text: "Negara-bangsa Malaysia yang merdeka." }
+            { id: "A", text: "Bahasa yang digunakan dalam upacara keagamaan sahaja." },
+            { id: "B", text: "Bahasa ibunda sesuatu kaum." },
+            { id: "C", text: "Bahasa yang digunakan secara meluas sebagai bahasa perantaraan antara penutur yang berlainan bahasa." },
+            { id: "D", text: "Bahasa yang mempunyai sistem tulisan yang paling canggih." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Nota secara jelas mengkategorikan Zaman Proto Sejarah dengan \"Kewujudan kerajaan purba / kerajaan awal\" dan menyenaraikan contoh seperti 'Langkasuka', 'Kedah Tua', dan 'Gangga Negara'.",
+            correct: "Jawapan C adalah betul. 'Lingua franca' ialah bahasa perhubungan yang membolehkan komunikasi antara pelbagai kumpulan etnik. Bahasa Melayu telah menjadi lingua franca di Alam Melayu.",
             incorrect: {
-                "A": "A merujuk kepada Zaman Pra Sejarah.",
-                "C": "C merujuk kepada Zaman Pensejarahan.",
-                "D": "D merujuk kepada Zaman Sejarah Moden."
+                "A": "Pilihan A terlalu spesifik.",
+                "B": "Pilihan B adalah definisi bahasa ibunda.",
+                "D": "Pilihan D tidak berkaitan."
             }
         }
     },
     {
         id: 39,
-        question: "Apakah kesan utama kedatangan Portugis di Melaka terhadap struktur masyarakat tempatan?",
+        question: "[Topik 3] Apakah kesan utama sistem ekonomi sara diri pada era prakolonial?",
         options: [
-            { id: "A", text: "Pengenalan sistem tulisan Jawi." },
-            { id: "B", text: "Kewujudan masyarakat Serani hasil perkahwinan campur." },
-            { id: "C", text: "Pengukuhan sistem feudal Melayu." },
-            { id: "D", text: "Larangan penggunaan bahasa Melayu." }
+            { id: "A", text: "Mewujudkan jurang ekonomi yang besar." },
+            { id: "B", text: "Menggalakkan perdagangan antarabangsa secara besar-besaran." },
+            { id: "C", text: "Menghasilkan lebihan pengeluaran untuk dieksport." },
+            { id: "D", text: "Masyarakat menghasilkan barangan sekadar untuk menampung keperluan diri dan keluarga." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "D",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 885 menyatakan \"Kesan utama kewujudan masyarakat Serani - perkahwinan campur\". Portugis juga memperkenalkan tulisan rumi.",
+            correct: "Jawapan D adalah betul. Ekonomi sara diri adalah kegiatan ekonomi asas di mana pengeluaran hanya cukup untuk keperluan sendiri, bukan untuk tujuan komersial.",
             incorrect: {
-                "A": "A salah kerana tulisan Jawi berasal dari pengaruh Arab-Islam.",
-                "C": "C salah kerana kedatangan Portugis membawa kepada keruntuhan Kesultanan Melayu Melaka.",
-                "D": "D salah kerana nota menyebut tentang wujudnya perkataan pinjaman Portugis dalam Bahasa Melayu, menandakan ia terus digunakan."
+                "A": "Pilihan A salah. Jurang ekonomi lebih ketara semasa era kolonial.",
+                "B": "Pilihan B salah. Ini bercanggah dengan konsep sara diri.",
+                "C": "Pilihan C salah. Ekonomi sara diri dicirikan oleh ketiadaan lebihan."
             }
         }
     },
     {
         id: 40,
-        question: "Revolusi Perancis memperkenalkan slogan penting yang mempengaruhi pemikiran politik moden. Apakah slogan tersebut?",
+        question: "[Topik 4] Apakah alat penyatupaduan yang paling asas dalam konteks pembentukan Malaysia?",
         options: [
-            { id: "A", text: "Kebebasan, Persamaan, Persaudaraan (Liberty, Equality, Fraternity)" },
-            { id: "B", text: "Agama, Raja, Negara" },
-            { id: "C", text: "Kehidupan, Kebebasan, Pengejaran Kebahagiaan" },
-            { id: "D", text: "Tiada Cukai Tanpa Perwakilan" }
+            { id: "A", text: "Media sosial" },
+            { id: "B", text: "Perlembagaan Persekutuan" },
+            { id: "C", text: "Dasar Ekonomi Baru" },
+            { id: "D", text: "Kempen pilihan raya" }
         ],
-        correctAnswer: "A",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah A. Sumber 1001 menyatakan bahawa Revolusi Perancis membawa kepada slogan \"Liberty, Equality, Fraternity, Nation\".",
+            correct: "Jawapan B adalah betul. Perlembagaan Persekutuan adalah 'tapak integrasi' utama yang menggariskan kontrak sosial antara kaum dan menjadi kerangka kepada struktur pemerintahan negara.",
             incorrect: {
-                "B": "Pilihan B, C, dan D adalah slogan dari konteks sejarah dan pergerakan yang berbeza dan tidak disebut berkaitan Revolusi Perancis dalam nota.",
-                "C": "Pilihan B, C, dan D adalah slogan dari konteks sejarah dan pergerakan yang berbeza dan tidak disebut berkaitan Revolusi Perancis dalam nota.",
-                "D": "Pilihan B, C, dan D adalah slogan dari konteks sejarah dan pergerakan yang berbeza dan tidak disebut berkaitan Revolusi Perancis dalam nota."
+                "A": "Pilihan A boleh menjadi alat penyatuan atau pemecahan.",
+                "C": "Pilihan C adalah dasar penting, tetapi berlandaskan Perlembagaan.",
+                "D": "Pilihan D sering menonjolkan perbezaan."
             }
         }
     },
     {
         id: 41,
-        question: "Dalam kerangka IPNas 2018, apakah tiga elemen di bawah teras 'Penyatupaduan'?",
+        question: "[Topik 1] Evolusi sejarah Malaysia yang dibahagikan kepada Prakolonial, Kolonial, dan Pascakolonial membantu kita memahami...",
         options: [
-            { id: "A", text: "Etos Bangsa, Kesepaduan Sosial, Defisit Sosial" },
-            { id: "B", text: "Etnik, Hubungan Sosial Rentas Etnik, Tadbir Urus & Pembangunan" },
-            { id: "C", text: "Detik Perpaduan, Detik Perbezaan, Jarak Sosial" },
-            { id: "D", text: "Agama, Bahasa, Politik Federalisme" }
+            { id: "A", text: "Bagaimana iklim negara berubah mengikut zaman." },
+            { id: "B", text: "Bagaimana penghayatan etika dan peradaban dibentuk secara berbeza mengikut peredaran masa." },
+            { id: "C", text: "Senarai semua raja dan pemerintah yang pernah wujud." },
+            { id: "D", text: "Perkembangan teknologi pembinaan dari rumah kayu ke konkrit." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Gambar rajah Teras Utama Indeks Perpaduan Nasional 2018 menunjukkan di bawah '03 PENYATUPADUAN' terdapat komponen 'Etnik (Tahap Keetnikan, Batas Etnik)', 'Hubungan Sosial Rentas Etnik', dan 'Tadbir Urus & Pembangunan (TUP)'.",
+            correct: "Jawapan B adalah betul. Pembahagian susur masa ini membolehkan kita melihat bagaimana konsep etika dan amalan peradaban dipengaruhi oleh kuasa dominan pada setiap zaman.",
             incorrect: {
-                "A": "A adalah komponen di bawah teras 'Kesepaduan'.",
-                "C": "C adalah komponen di bawah teras 'Perpaduan'.",
-                "D": "D adalah contoh-contoh aspek di mana kesepaduan sosial dianalisis, bukan teras utama dalam model IPNas itu."
+                "A": "Pilihan A adalah kajian klimatologi.",
+                "C": "Pilihan C adalah kajian genealogi.",
+                "D": "Pilihan D terlalu spesifik dan bukan fokus utama."
             }
         }
     },
     {
         id: 42,
-        question: "'Revolusi Mental' yang disebut dalam rujukan Topik 3 adalah karya oleh __________.",
+        question: "[Topik 2] Apakah kesan globalisasi terhadap peradaban kontemporari?",
         options: [
-            { id: "A", text: "Tun Abdul Razak" },
-            { id: "B", text: "Muhammad Yusoff Hashim" },
-            { id: "C", text: "Senu Abdul Rahman" },
-            { id: "D", text: "Wan Norhasniah Wan Husin" }
+            { id: "A", text: "Mengukuhkan sempadan negara dan mengurangkan interaksi antarabangsa." },
+            { id: "B", text: "Memungkinkan interaksi dan jaringan peradaban merentasi benua melalui teknologi maklumat." },
+            { id: "C", text: "Menyebabkan semua peradaban di dunia menjadi seragam sepenuhnya." },
+            { id: "D", text: "Mengembalikan amalan masyarakat kepada cara hidup tradisional." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Senarai rujukan pada akhir Topik 3 dengan jelas menyenaraikan: \"Senu Abdul Rahman. 2002. Revolusi Mental. Utusan Publications & Distributors Sdn. Bhd\".",
+            correct: "Jawapan B adalah betul. Globalisasi, yang dipacu oleh teknologi digital, membolehkan idea dan budaya dari seluruh dunia tersebar dengan pantas, mewujudkan 'peradaban kacukan global'.",
             incorrect: {
-                "A": "A, B, dan D adalah tokoh dan penulis yang penting, tetapi buku 'Revolusi Mental' adalah karya Senu Abdul Rahman.",
-                "B": "A, B, dan D adalah tokoh dan penulis yang penting, tetapi buku 'Revolusi Mental' adalah karya Senu Abdul Rahman.",
-                "D": "A, B, dan D adalah tokoh dan penulis yang penting, tetapi buku 'Revolusi Mental' adalah karya Senu Abdul Rahman."
+                "A": "Pilihan A salah. Globalisasi melenyapkan sempadan.",
+                "C": "Pilihan C salah. Terdapat juga pengukuhan identiti tempatan.",
+                "D": "Pilihan D salah. Globalisasi memacu ke arah pemodenan."
             }
         }
     },
     {
         id: 43,
-        question: "Pengaruh peradaban China ke atas kebudayaan masyarakat Melayu dapat dilihat melalui perkara berikut, KECUALI...",
+        question: "[Topik 3] Apakah yang dimaksudkan dengan asimilasi struktur?",
         options: [
-            { id: "A", text: "Serapan beberapa perkataan Cina ke dalam bahasa Melayu." },
-            { id: "B", text: "Kewujudan komuniti Baba dan Nyonya." },
-            { id: "C", text: "Pengenalan sistem tulisan rumi." },
-            { id: "D", text: "Pengaruh dalam beberapa jenis makanan dan pakaian." }
+            { id: "A", text: "Kelompok minoriti mempelajari bahasa dan pakaian kelompok majoriti." },
+            { id: "B", text: "Kelompok minoriti berjaya menyertai institusi utama seperti pekerjaan dan politik dalam masyarakat majoriti." },
+            { id: "C", text: "Perkahwinan campur antara kelompok minoriti dan majoriti." },
+            { id: "D", text: "Kelompok minoriti tinggal di kawasan yang sama dengan kelompok majoriti." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Pengenalan sistem tulisan rumi adalah pengaruh daripada peradaban Barat, khususnya Portugis.",
+            correct: "Jawapan B adalah betul. Asimilasi struktur merujuk kepada penyertaan kelompok minoriti ke dalam institusi sosial, ekonomi, dan politik masyarakat majoriti.",
             incorrect: {
-                "A": "A, B, dan D adalah semua contoh pengaruh peradaban Cina yang disenaraikan dalam nota.",
-                "B": "A, B, dan D adalah semua contoh pengaruh peradaban Cina yang disenaraikan dalam nota.",
-                "D": "A, B, dan D adalah semua contoh pengaruh peradaban Cina yang disenaraikan dalam nota."
+                "A": "Pilihan A adalah asimilasi budaya.",
+                "C": "Pilihan C adalah amalgamasi.",
+                "D": "Pilihan D tidak semestinya bermakna penyertaan dalam institusi."
             }
         }
     },
     {
         id: 44,
-        question: "Menurut perspektif falsafah dan pemikiran moden, manusia...",
+        question: "[Topik 4] Communities Liaison Committee (CLC) 1949 adalah satu contoh awal...",
         options: [
-            { id: "A", text: "hanya perlu memilih cara untuk mencapai matlamat yang telah ditetapkan." },
-            { id: "B", text: "perlu mengintegrasikan ilmu agama dan ilmu alat." },
-            { id: "C", text: "berhak menentukan matlamat hidupnya dan cara untuk mencapainya." },
-            { id: "D", text: "harus berpegang kepada adat dan tradisi semata-mata." }
+            { id: "A", text: "Parti politik perkauman." },
+            { id: "B", text: "Kesatuan sekerja." },
+            { id: "C", text: "Tapak integrasi untuk perundingan antara pemimpin elit kaum." },
+            { id: "D", text: "Mahkamah untuk menyelesaikan pertikaian antara kaum." }
         ],
         correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 1445 menyatakan \"Perspektif ini [moden] berpandangan manusia berhak menentukan matlamat hidupnya dan berhak memilih cara bagaimana untuk mengecapi matlamat tersebut\".",
+            correct: "Jawapan C adalah betul. CLC adalah 'tapak integrasi' awal yang penting di mana pemimpin utama pelbagai kaum bertemu untuk berunding isu-isu sensitif menjelang kemerdekaan.",
             incorrect: {
-                "A": "A adalah ciri pemikiran tradisional.",
-                "B": "B adalah pandangan Ibn Khaldun.",
-                "D": "D bertentangan dengan semangat pemikiran moden yang menekankan rasional dan hak individu."
+                "A": "Pilihan A salah. CLC bukan parti politik.",
+                "B": "Pilihan B salah. Ia tidak mewakili pekerja.",
+                "D": "Pilihan D salah. Ia bukan badan kehakiman."
             }
         }
     },
     {
         id: 45,
-        question: "Antara tiga kuasa kolonial Barat yang pernah menjajah Tanah Melayu, kuasa manakah yang penjajahannya tidak banyak meninggalkan kesan signifikan terhadap peradaban Melayu selain di Melaka?",
+        question: "[Topik 1] Apakah hubungan antara etika masyarakat dengan kedudukan negara di peringkat antarabangsa?",
         options: [
-            { id: "A", text: "Portugis" },
-            { id: "B", text: "Belanda" },
-            { id: "C", text: "British" },
-            { id: "D", text: "Sepanyol" }
+            { id: "A", text: "Tiada sebarang hubungan." },
+            { id: "B", text: "Masyarakat yang beretika membentuk negara yang stabil dan dihormati, yang menarik pelaburan dan pasaran." },
+            { id: "C", text: "Negara yang kaya akan secara automatik mempunyai masyarakat yang beretika." },
+            { id: "D", text: "Etika masyarakat hanya penting untuk hubungan dalaman dan tidak memberi kesan kepada pasaran global." }
         ],
         correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 902 menyatakan, \"Penjajahan Belanda tidak banyak meninggalkan kesan terhadap peradaban Melayu\". Walaupun mereka menjajah Melaka untuk tempoh yang lama, pusat utama mereka ialah di Betawi dan kesannya tidak sebesar pengaruh British.",
+            correct: "Jawapan B adalah betul. Imej sesebuah negara banyak bergantung pada kestabilan masyarakatnya. Masyarakat yang beretika menyumbang kepada kestabilan politik dan sosial, faktor penting untuk keyakinan pelabur.",
             incorrect: {
-                "A": "A (Portugis) meninggalkan kesan seperti masyarakat Serani dan tulisan rumi.",
-                "C": "C (British) meninggalkan kesan yang sangat mendalam pada sistem pentadbiran, undang-undang, ekonomi dan sosial.",
-                "D": "D (Sepanyol) tidak pernah menjajah Tanah Melayu."
+                "A": "Pilihan A salah. Terdapat hubungan yang signifikan.",
+                "C": "Pilihan C salah. Kekayaan tidak menjamin etika.",
+                "D": "Pilihan D salah. Etika seperti integriti memberi kesan langsung kepada pasaran."
             }
         }
     },
     {
         id: 46,
-        question: "Apakah yang dimaksudkan dengan istilah 'Segregasi' dalam konteks hubungan etnik?",
+        question: "[Topik 2] Manakah antara berikut BUKAN kerajaan awal yang wujud di Alam Melayu sebelum Kesultanan Melayu Melaka?",
         options: [
-            { id: "A", text: "Percantuman biologi melalui perkahwinan campur." },
-            { id: "B", text: "Penerimaan budaya etnik lain tanpa menggugat budaya sendiri." },
-            { id: "C", text: "Proses penyerapan budaya majoriti oleh kumpulan minoriti." },
-            { id: "D", text: "Pemisahan atau pengasingan antara satu etnik dengan etnik yang lain." }
+            { id: "A", text: "Langkasuka" },
+            { id: "B", text: "Gangga Negara" },
+            { id: "C", text: "Kerajaan Demak" },
+            { id: "D", text: "Srivijaya" }
         ],
-        correctAnswer: "D",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah D. Sumber 1290 mendefinisikan segregasi sebagai \"Pemisahan atau pengasingan antara etnik dengan etnik yang lain\" atau keadaan di mana \"individu atau kumpulan sosial tertentu dipisahkan atau diasingkan dengan individu atau kumpulan sosial lain\".",
+            correct: "Jawapan C adalah betul. Kerajaan Demak adalah kesultanan di Jawa yang kemunculannya sezaman atau sedikit lewat berbanding Kesultanan Melayu Melaka.",
             incorrect: {
-                "A": "A adalah Amalgamasi.",
-                "B": "B adalah Akomodasi.",
-                "C": "C adalah Asimilasi."
+                "A": "Pilihan A salah. Langkasuka adalah kerajaan purba.",
+                "B": "Pilihan B salah. Gangga Negara adalah kerajaan purba.",
+                "D": "Pilihan D salah. Srivijaya adalah kerajaan purba."
             }
         }
     },
     {
         id: 47,
-        question: "Zaman apakah yang menyaksikan kemunculan Kerajaan Kesultanan Melayu Melaka dan permulaan pembentukan masyarakat kepelbagaian melalui perdagangan?",
+        question: "[Topik 3] Apakah faktor utama yang mendorong kemasukan buruh dari China dan India secara besar-besaran ke Tanah Melayu?",
         options: [
-            { id: "A", text: "Zaman Pra Sejarah" },
-            { id: "B", text: "Zaman Proto Sejarah" },
-            { id: "C", text: "Zaman Pensejarahan" },
-            { id: "D", text: "Zaman Sejarah Moden" }
+            { id: "A", text: "Untuk menyebarkan budaya dan agama mereka." },
+            { id: "B", text: "Untuk memenuhi keperluan tenaga kerja dalam sektor perlombongan dan perladangan." },
+            { id: "C", text: "Untuk membantu British dalam pentadbiran negeri." },
+            { id: "D", text: "Untuk mencari perlindungan politik." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Garis masa perkembangan sejarah dalam nota mengkategorikan \"Kewujudan Kerajaan Kesultanan Melayu Melaka\" dan \"Bermula pembentukan masyarakat kepelbagaian - perdagangan\" di bawah Zaman Pensejarahan.",
+            correct: "Jawapan B adalah betul. Pembukaan lombong bijih timah dan ladang getah oleh British memerlukan tenaga kerja yang ramai, membawa kepada dasar imigrasi liberal.",
             incorrect: {
-                "A": "A, B, dan D merujuk kepada peringkat sejarah yang lain seperti yang dihuraikan dalam nota.",
-                "B": "A, B, dan D merujuk kepada peringkat sejarah yang lain seperti yang dihuraikan dalam nota.",
-                "D": "A, B, dan D merujuk kepada peringkat sejarah yang lain seperti yang dihuraikan dalam nota."
+                "A": "Pilihan A salah. Ini bukan tujuan utama mereka.",
+                "C": "Pilihan C salah. Pentadbiran diisi oleh golongan lain.",
+                "D": "Pilihan D salah. Faktor utama adalah ekonomi."
             }
         }
     },
     {
         id: 48,
-        question: "Teknologi maklumat dan media digital yang dikuasai oleh Barat dilihat sebagai satu cabaran yang boleh mempengaruhi nilai dan etika melalui proses yang dikenali sebagai __________.",
+        question: "[Topik 4] Bahasa Melayu sebagai bahasa kebangsaan memainkan peranan sebagai...",
         options: [
-            { id: "A", text: "Penjajahan fizikal" },
-            { id: "B", text: "Penjajahan pemikiran dan budaya" },
-            { id: "C", text: "Pertukaran teknologi" },
-            { id: "D", text: "Kerjasama ekonomi" }
+            { id: "A", text: "Alat untuk menghapuskan semua bahasa lain." },
+            { id: "B", text: "Simbol kedaulatan raja-raja Melayu sahaja." },
+            { id: "C", text: "Salah satu elemen penting dalam membina kesepaduan sosial dan etos nasional." },
+            { id: "D", text: "Bahasa yang hanya digunakan dalam urusan perniagaan." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah B. Sumber 1504 menyatakan, \"Budaya Barat telah mempengaruhi perkembangan teknologi dan komunikasi dan menyerap masuk dalam kehidupan peradaban bukan Barat melalui bentuk penjajahan pemikiran dan budaya\".",
+            correct: "Jawapan C adalah betul. Bahasa kebangsaan berfungsi sebagai lingua franca yang membolehkan komunikasi merentasi kaum dan menjadi tiang seri dalam pembinaan identiti nasional.",
             incorrect: {
-                "A": "A merujuk kepada era kolonialisme fizikal.",
-                "C": "C dan D adalah istilah yang lebih neutral dan tidak menangkap aspek cabaran seperti yang dinyatakan dalam nota.",
-                "D": "C dan D adalah istilah yang lebih neutral dan tidak menangkap aspek cabaran seperti yang dinyatakan dalam nota."
+                "A": "Pilihan A salah. Perlembagaan menjamin hak menggunakan bahasa lain.",
+                "B": "Pilihan B salah. Ia adalah simbol negara.",
+                "D": "Pilihan D salah. Ia digunakan dalam semua urusan rasmi."
             }
         }
     },
     {
         id: 49,
-        question: "Peradaban Melayu Islam yang berkembang di Melaka, Pattani dan Acheh adalah hasil penyerapan unsur dan tradisi tamadun Islam yang berasal dari __________.",
+        question: "[Topik 1] Mengapakah penghayatan etika dan peradaban penting dalam usaha membina negara bangsa?",
         options: [
-            { id: "A", text: "Eropah" },
-            { id: "B", text: "China" },
-            { id: "C", text: "India" },
-            { id: "D", text: "Timur Tengah" }
+            { id: "A", text: "Kerana ia merupakan syarat untuk menyertai PBB." },
+            { id: "B", text: "Kerana ia dapat meningkatkan hasil eksport negara." },
+            { id: "C", text: "Kerana ia membentuk masyarakat yang saling menghormati, hidup harmoni, dan berkeperibadian tinggi." },
+            { id: "D", text: "Kerana ia dapat menjamin kemenangan dalam sukan antarabangsa." }
         ],
-        correctAnswer: "D",
+        correctAnswer: "C",
         explanation: {
-            correct: "Jawapan yang betul ialah D. Nota menyatakan dengan jelas bahawa pengaruh utama pengembangan agama Islam datang dari Timur Tengah. Sumber 818 menyatakan \"Peradaban Melayu telah menyerap unsur dan tradisi tamadun Islam\" yang akhirnya melahirkan pusat tamadun Melayu Islam.",
+            correct: "Jawapan C adalah betul. Negara bangsa yang berjaya bergantung pada kualiti modal insan. Masyarakat yang beretika akan mewujudkan suasana sosial yang harmoni dan stabil.",
             incorrect: {
-                "A": "A, B, dan C adalah peradaban lain yang turut memberi pengaruh kepada Alam Melayu, tetapi sumber utama tamadun Islam adalah dari Timur Tengah.",
-                "B": "A, B, dan C adalah peradaban lain yang turut memberi pengaruh kepada Alam Melayu, tetapi sumber utama tamadun Islam adalah dari Timur Tengah.",
-                "C": "A, B, dan C adalah peradaban lain yang turut memberi pengaruh kepada Alam Melayu, tetapi sumber utama tamadun Islam adalah dari Timur Tengah."
+                "A": "Pilihan A salah. Ini bukan syarat formal.",
+                "B": "Pilihan B salah. Hubungannya tidak langsung.",
+                "D": "Pilihan D salah. Tiada kaitan langsung."
             }
         }
     },
     {
         id: 50,
-        question: "Apakah kerisauan utama yang dinyatakan dalam nota berkaitan percampuran nilai etika pada zaman pascakolonial?",
+        question: "[Topik 2] Apakah perbezaan utama antara peradaban Barat dan Timur dari segi sumber nilai etika?",
         options: [
-            { id: "A", text: "Kebanjiran teknologi dari Barat." },
-            { id: "B", text: "Kemerosotan ekonomi negara." },
-            { id: "C", text: "Kemerosotan budi pekerti, tingkah laku dan budi bahasa." },
-            { id: "D", text: "Kehilangan penguasaan bahasa ibunda." }
+            { id: "A", text: "Barat mementingkan sains, manakala Timur mementingkan teknologi." },
+            { id: "B", text: "Barat menekankan rasional-legal dan individualisme, manakala etika Timur banyak berteraskan agama dan kolektivisme." },
+            { id: "C", text: "Barat tidak mempunyai sebarang sistem etika." },
+            { id: "D", text: "Timur menolak sepenuhnya pemodenan." }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         explanation: {
-            correct: "Jawapan yang betul ialah C. Sumber 125 menyatakan dengan jelas: \"Kerisauan kita ialah budi pekerti, tingkah laku dan budi bahasa kita merosot disebabkan kegagalan kita mempelajari dan menghayati E&P negara kita\".",
+            correct: "Jawapan B adalah betul. Peradaban Barat moden cenderung mendasarkan etika pada logik dan hak individu, manakala peradaban Timur secara tradisinya mengaitkan etika dengan ajaran agama dan tanggungjawab kolektif.",
             incorrect: {
-                "A": "A, B, dan D adalah isu-isu yang mungkin relevan, tetapi kerisauan yang spesifik disebut dalam konteks etika pascakolonial dalam nota ialah kemerosotan budi bahasa dan pekerti.",
-                "B": "A, B, dan D adalah isu-isu yang mungkin relevan, tetapi kerisauan yang spesifik disebut dalam konteks etika pascakolonial dalam nota ialah kemerosotan budi bahasa dan pekerti.",
-                "D": "A, B, dan D adalah isu-isu yang mungkin relevan, tetapi kerisauan yang spesifik disebut dalam konteks etika pascakolonial dalam nota ialah kemerosotan budi bahasa dan pekerti."
+                "A": "Pilihan A salah. Kedua-duanya mementingkan sains dan teknologi.",
+                "C": "Pilihan C salah. Barat mempunyai tradisi falsafah etika yang kaya.",
+                "D": "Pilihan D salah. Timur menerima pemodenan secara terpilih."
             }
         }
     }
